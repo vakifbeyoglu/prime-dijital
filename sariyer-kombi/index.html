@@ -304,7 +304,13 @@ details[open] .ans{grid-template-rows:1fr}
 
 /* ── arka plan: kaydırdıkça parçalanan kombi ── */
 .boiler-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;display:grid;place-items:center;opacity:.46}
-.boiler-bg svg{width:min(100vw,92vh);height:96vh;overflow:visible}
+.boiler-bg svg{width:min(100vw,92vh);height:96vh;overflow:visible;grid-area:1/1;transition:opacity .6s var(--ease-out)}
+#bg-klima{opacity:0} body.klima #bg-kombi{opacity:0} body.klima #bg-klima{opacity:1}
+.air{fill:none;stroke:#60A5FA;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:14 12}
+.flow{fill:none;stroke-width:3.2;stroke-linecap:round;stroke-dasharray:10 16;opacity:0}
+.flow.cold{stroke:#3B82F6}.flow.warm{stroke:#F97316}
+@media(prefers-reduced-motion:no-preference){.air{animation:airflow 1.6s linear infinite}.flow{animation:airflow 1.2s linear infinite}}
+@keyframes airflow{to{stroke-dashoffset:-52}}
 @media(max-width:760px){.boiler-bg{opacity:.3}.boiler-bg svg{width:118vw}}
 .bp{transform-box:view-box;transition:none;will-change:transform}
 .bl{fill:none;stroke:#1E40AF;stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
@@ -346,7 +352,7 @@ html:not(.js) .mode,html:not(.js) .steps,html:not(.js) .hint{display:none}
 <a class="skip" href="#main">İçeriğe geç</a>
 <div class="aura" aria-hidden="true"></div>
 <div class="boiler-bg" aria-hidden="true">
-  <svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid meet">
+  <svg id="bg-kombi" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid meet">
     <defs>
       <linearGradient id="bfl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2563EB"/><stop offset=".35" stop-color="#F97316"/><stop offset="1" stop-color="#FDE68A"/></linearGradient>
       <radialGradient id="bglow" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#FB923C" stop-opacity=".9"/><stop offset="1" stop-color="#FB923C" stop-opacity="0"/></radialGradient>
@@ -466,6 +472,110 @@ html:not(.js) .mode,html:not(.js) .steps,html:not(.js) .hint{display:none}
       <circle cx="355" cy="725" r="9" class="bl thin"/><circle cx="445" cy="725" r="9" class="bl thin"/>
       <path d="M400 300c8 10 15 16 15 27a15 15 0 0 1-30 0c0-6 3-10 7-13 .5 4 2.5 7 5.5 8-1-8 0-15 2.5-22z" fill="#EA580C" opacity=".85"/>
       <path class="bl thin" d="M285 760h230"/>
+    </g>
+    </g>
+  </svg>
+  <svg id="bg-klima" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <linearGradient id="kcov" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E0EAFF"/></linearGradient>
+      <linearGradient id="kcoil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFDBFE"/><stop offset="1" stop-color="#93C5FD"/></linearGradient>
+    </defs>
+    <g id="k-all" style="transform-box:view-box;transform-origin:400px 660px">
+
+    <!-- İÇ ÜNİTE: arka gövde -->
+    <g class="bp" data-o=".55">
+      <rect class="bl bf" x="170" y="200" width="460" height="130" rx="30" fill-opacity=".35"/>
+    </g>
+    <!-- evaporatör -->
+    <g class="bp" data-y="-55">
+      <rect class="bl" x="200" y="228" width="400" height="58" rx="8" fill="url(#kcoil)" fill-opacity=".8"/>
+      <path class="bl thin" d="M212 232V282"/><path class="bl thin" d="M222 232V282"/><path class="bl thin" d="M232 232V282"/><path class="bl thin" d="M242 232V282"/><path class="bl thin" d="M252 232V282"/><path class="bl thin" d="M262 232V282"/><path class="bl thin" d="M272 232V282"/><path class="bl thin" d="M282 232V282"/><path class="bl thin" d="M292 232V282"/><path class="bl thin" d="M302 232V282"/><path class="bl thin" d="M312 232V282"/><path class="bl thin" d="M322 232V282"/><path class="bl thin" d="M332 232V282"/><path class="bl thin" d="M342 232V282"/><path class="bl thin" d="M352 232V282"/><path class="bl thin" d="M362 232V282"/><path class="bl thin" d="M372 232V282"/><path class="bl thin" d="M382 232V282"/><path class="bl thin" d="M392 232V282"/><path class="bl thin" d="M402 232V282"/><path class="bl thin" d="M412 232V282"/><path class="bl thin" d="M422 232V282"/><path class="bl thin" d="M432 232V282"/><path class="bl thin" d="M442 232V282"/><path class="bl thin" d="M452 232V282"/><path class="bl thin" d="M462 232V282"/><path class="bl thin" d="M472 232V282"/><path class="bl thin" d="M482 232V282"/><path class="bl thin" d="M492 232V282"/><path class="bl thin" d="M502 232V282"/><path class="bl thin" d="M512 232V282"/><path class="bl thin" d="M522 232V282"/><path class="bl thin" d="M532 232V282"/><path class="bl thin" d="M542 232V282"/><path class="bl thin" d="M552 232V282"/><path class="bl thin" d="M562 232V282"/><path class="bl thin" d="M572 232V282"/><path class="bl thin" d="M582 232V282"/><path class="bl thin" d="M592 232V282"/>
+      <path class="blab-line" d="M200 257L120 190"/><text class="blab" x="114" y="195" text-anchor="end">Evaporatör (iç serpantin)</text>
+    </g>
+    <!-- hava filtresi -->
+    <g class="bp" data-y="-105">
+      <rect class="bl" x="190" y="215" width="420" height="66" rx="8" fill="#F8FAFC" fill-opacity=".7"/>
+      <path class="bl thin" d="M205 220V278"/><path class="bl thin" d="M219 220V278"/><path class="bl thin" d="M233 220V278"/><path class="bl thin" d="M247 220V278"/><path class="bl thin" d="M261 220V278"/><path class="bl thin" d="M275 220V278"/><path class="bl thin" d="M289 220V278"/><path class="bl thin" d="M303 220V278"/><path class="bl thin" d="M317 220V278"/><path class="bl thin" d="M331 220V278"/><path class="bl thin" d="M345 220V278"/><path class="bl thin" d="M359 220V278"/><path class="bl thin" d="M373 220V278"/><path class="bl thin" d="M387 220V278"/><path class="bl thin" d="M401 220V278"/><path class="bl thin" d="M415 220V278"/><path class="bl thin" d="M429 220V278"/><path class="bl thin" d="M443 220V278"/><path class="bl thin" d="M457 220V278"/><path class="bl thin" d="M471 220V278"/><path class="bl thin" d="M485 220V278"/><path class="bl thin" d="M499 220V278"/><path class="bl thin" d="M513 220V278"/><path class="bl thin" d="M527 220V278"/><path class="bl thin" d="M541 220V278"/><path class="bl thin" d="M555 220V278"/><path class="bl thin" d="M569 220V278"/><path class="bl thin" d="M583 220V278"/><path class="bl thin" d="M597 220V278"/><path class="bl thin" d="M195 228H606"/><path class="bl thin" d="M195 240H606"/><path class="bl thin" d="M195 252H606"/><path class="bl thin" d="M195 264H606"/><path class="bl thin" d="M195 276H606"/>
+      <path class="blab-line" d="M610 230L690 120"/><text class="blab" x="696" y="125" text-anchor="start">Hava filtresi</text>
+    </g>
+    <!-- teğetsel fan -->
+    <g class="bp" data-y="55">
+      <rect class="bl bf" x="230" y="296" width="340" height="26" rx="13"/>
+      <g class="kstripes"><path class="bl thin" d="M244 300V318"/><path class="bl thin" d="M256 300V318"/><path class="bl thin" d="M268 300V318"/><path class="bl thin" d="M280 300V318"/><path class="bl thin" d="M292 300V318"/><path class="bl thin" d="M304 300V318"/><path class="bl thin" d="M316 300V318"/><path class="bl thin" d="M328 300V318"/><path class="bl thin" d="M340 300V318"/><path class="bl thin" d="M352 300V318"/><path class="bl thin" d="M364 300V318"/><path class="bl thin" d="M376 300V318"/><path class="bl thin" d="M388 300V318"/><path class="bl thin" d="M400 300V318"/><path class="bl thin" d="M412 300V318"/><path class="bl thin" d="M424 300V318"/><path class="bl thin" d="M436 300V318"/><path class="bl thin" d="M448 300V318"/><path class="bl thin" d="M460 300V318"/><path class="bl thin" d="M472 300V318"/><path class="bl thin" d="M484 300V318"/><path class="bl thin" d="M496 300V318"/><path class="bl thin" d="M508 300V318"/><path class="bl thin" d="M520 300V318"/><path class="bl thin" d="M532 300V318"/><path class="bl thin" d="M544 300V318"/><path class="bl thin" d="M556 300V318"/></g>
+      <path class="blab-line" d="M230 309L130 360"/><text class="blab" x="124" y="365" text-anchor="end">Teğetsel fan</text>
+    </g>
+    <!-- yönlendirici kanat -->
+    <g class="bp" data-y="120" data-r="-6" style="transform-origin:400px 335px">
+      <path class="bl" d="M205 333c60 14 330 14 390 0" />
+      <path class="blab-line" d="M205 333L120 440"/><text class="blab" x="114" y="445" text-anchor="end">Yönlendirici kanat</text>
+    </g>
+    <!-- iç elektronik kart -->
+    <g class="bp" data-x="230" data-y="-20">
+      <rect class="bl" x="566" y="236" width="48" height="40" rx="5" fill="#DCFCE7"/>
+      <path class="bl thin" d="M574 248h22M574 258h30M574 266h14" stroke="#15803D"/>
+      <path class="blab-line" d="M614 256L700 250"/><text class="blab" x="706" y="255" text-anchor="start">Elektronik kart</text>
+    </g>
+    <!-- soğuk hava (alev karşılığı) -->
+    <g id="k-air" opacity="0"><path class="air" style="animation-delay:-0.00s" d="M250 352c-10 18 10 30 0 48s10 30 0 48"/><path class="air" style="animation-delay:-0.35s" d="M294 352c-10 18 10 30 0 48s10 30 0 48"/><path class="air" style="animation-delay:-0.70s" d="M338 352c-10 18 10 30 0 48s10 30 0 48"/><path class="air" style="animation-delay:-1.05s" d="M382 352c-10 18 10 30 0 48s10 30 0 48"/><path class="air" style="animation-delay:-1.40s" d="M426 352c-10 18 10 30 0 48s10 30 0 48"/><path class="air" style="animation-delay:-1.75s" d="M470 352c-10 18 10 30 0 48s10 30 0 48"/><path class="air" style="animation-delay:-2.10s" d="M514 352c-10 18 10 30 0 48s10 30 0 48"/><path class="air" style="animation-delay:-2.45s" d="M558 352c-10 18 10 30 0 48s10 30 0 48"/></g>
+
+    <!-- bakır borular -->
+    <g class="bp" data-x="110">
+      <path class="bl" d="M612 318C700 360 700 560 600 640"/>
+      <path class="bl" d="M598 322C680 370 680 560 586 646"/>
+      <path class="flow cold" d="M612 318C700 360 700 560 600 640"/>
+      <path class="flow warm" d="M586 646C680 560 680 370 598 322"/>
+      <path class="blab-line" d="M690 480L720 480"/><text class="blab" x="726" y="485" text-anchor="start">Bakır borular</text>
+    </g>
+
+    <!-- DIŞ ÜNİTE: kondenser (sabit) -->
+    <g class="bp" data-o=".6">
+      <rect class="bl bf" x="220" y="600" width="360" height="260" rx="18" fill-opacity=".35"/>
+      <path class="bl thin" d="M232 616H568"/><path class="bl thin" d="M232 626H568"/><path class="bl thin" d="M232 636H568"/><path class="bl thin" d="M232 646H568"/><path class="bl thin" d="M232 656H568"/><path class="bl thin" d="M232 666H568"/><path class="bl thin" d="M232 676H568"/><path class="bl thin" d="M232 686H568"/><path class="bl thin" d="M232 696H568"/><path class="bl thin" d="M232 706H568"/><path class="bl thin" d="M232 716H568"/><path class="bl thin" d="M232 726H568"/><path class="bl thin" d="M232 736H568"/><path class="bl thin" d="M232 746H568"/><path class="bl thin" d="M232 756H568"/><path class="bl thin" d="M232 766H568"/><path class="bl thin" d="M232 776H568"/><path class="bl thin" d="M232 786H568"/><path class="bl thin" d="M232 796H568"/><path class="bl thin" d="M232 806H568"/><path class="bl thin" d="M232 816H568"/><path class="bl thin" d="M232 826H568"/><path class="bl thin" d="M232 836H568"/><path class="bl thin" d="M232 846H568"/>
+      <path class="blab-line" d="M450 860L470 950"/><text class="blab" x="476" y="955" text-anchor="start">Kondenser (dış serpantin)</text>
+    </g>
+    <!-- dış fan -->
+    <g class="bp" data-x="-120" data-y="20">
+      <circle class="bl bf" cx="335" cy="730" r="88"/>
+      <g id="k-fan" style="transform-origin:335px 730px">
+        <path class="bl" d="M335 730c-10-40 6-70 30-74M335 730c40 0 60 28 52 52M335 730c-30 28-64 24-76 2"/>
+      </g>
+      <circle cx="335" cy="730" r="9" fill="#1E40AF"/>
+      <path class="blab-line" d="M250 700L120 640"/><text class="blab" x="114" y="645" text-anchor="end">Dış ünite fanı</text>
+    </g>
+    <!-- kompresör -->
+    <g class="bp" id="k-comp" data-x="230" data-y="40">
+      <rect class="bl" x="462" y="690" width="76" height="130" rx="34" fill="#E2E8F0"/>
+      <path class="bl thin" d="M462 730h76M462 780h76"/>
+      <path class="bl" d="M500 690v-24h40"/>
+      <path class="blab-line" d="M538 760L660 720"/><text class="blab" x="666" y="725" text-anchor="start">Kompresör</text>
+    </g>
+    <!-- dış elektronik kart -->
+    <g class="bp" data-x="220" data-y="-70">
+      <rect class="bl" x="470" y="618" width="72" height="48" rx="5" fill="#DCFCE7"/>
+      <path class="bl thin" d="M478 630h30M478 642h48M478 652h20" stroke="#15803D"/>
+      <path class="blab-line" d="M542 640L680 600"/><text class="blab" x="686" y="605" text-anchor="start">Dış kart</text>
+    </g>
+    <!-- servis vanaları -->
+    <g class="bp" data-x="250" data-y="140">
+      <rect class="bl" x="560" y="800" width="34" height="22" rx="5" fill="#FEF3C7"/>
+      <rect class="bl" x="560" y="830" width="34" height="22" rx="5" fill="#FEF3C7"/>
+      <path class="blab-line" d="M594 826L700 900"/><text class="blab" x="706" y="905" text-anchor="start">Servis vanaları</text>
+    </g>
+
+    <!-- dış ünite ön kasası -->
+    <g class="bp" data-x="-420" data-y="40" data-r="-8" data-o=".18" style="transform-origin:400px 730px">
+      <rect x="214" y="594" width="372" height="272" rx="20" fill="url(#kcov)" stroke="#1E40AF" stroke-width="2.2"/>
+      <circle class="bl" cx="335" cy="730" r="96"/>
+      <circle class="bl thin" cx="335" cy="730" r="30"/><circle class="bl thin" cx="335" cy="730" r="52"/><circle class="bl thin" cx="335" cy="730" r="74"/>
+      <path class="bl thin" d="M239 730h192M335 634v192"/>
+      <path class="bl thin" d="M468 620V846"/><path class="bl thin" d="M477 620V846"/><path class="bl thin" d="M486 620V846"/><path class="bl thin" d="M495 620V846"/><path class="bl thin" d="M504 620V846"/><path class="bl thin" d="M513 620V846"/><path class="bl thin" d="M522 620V846"/><path class="bl thin" d="M531 620V846"/><path class="bl thin" d="M540 620V846"/><path class="bl thin" d="M549 620V846"/><path class="bl thin" d="M558 620V846"/><path class="bl thin" d="M567 620V846"/>
+    </g>
+    <!-- iç ünite ön paneli -->
+    <g class="bp" data-y="-175" data-o=".2" style="transform-origin:400px 265px">
+      <rect x="165" y="195" width="470" height="140" rx="32" fill="url(#kcov)" stroke="#1E40AF" stroke-width="2.2"/>
+      <path class="bl thin" d="M200 312h400M200 322h400"/>
+      <text x="560" y="262" text-anchor="middle" font-family="Plus Jakarta Sans,system-ui,sans-serif" font-size="24" font-weight="700" fill="#3B82F6">22°</text>
+      <path class="bl thin" d="M232 240v32M218 248l28 16M218 264l28-16"/>
     </g>
     </g>
   </svg>
@@ -707,9 +817,9 @@ html:not(.js) .mode,html:not(.js) .steps,html:not(.js) .hint{display:none}
   </section>
   <section class="inside" aria-labelledby="ic-h">
     <div class="wrap">
-      <span class="eyebrow">Kombinizin içi</span>
+      <span class="eyebrow" id="ic-eb">Kombinizin içi</span>
       <h2 id="ic-h" style="margin-inline:auto">Her parçasını tanıyoruz</h2>
-      <p>Fan, eşanjör, brülör, pompa, vana, genleşme tankı. Arızanın hangi parçada olduğunu bulup yerinde onarıyoruz.</p>
+      <p id="ic-p">Fan, eşanjör, brülör, pompa, vana, genleşme tankı. Arızanın hangi parçada olduğunu bulup yerinde onarıyoruz.</p>
       <a class="chip" href="tel:+905452164346">Arayın · 0545 216 43 46</a>
     </div>
   </section>
@@ -732,9 +842,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   /* ── Termostat ── */
   document.documentElement.classList.add('js');
   const MODES={
-    kombi:{min:12,max:26,from:14,to:22,h1:'Ev soğuksa,',label:'Oda sıcaklığı (kombi)',wa:'Merhaba, kombimde sorun var. Mahallem: ',
+    kombi:{min:12,max:26,from:14,to:22,h1:'Ev soğuksa,',label:'Oda sıcaklığı (kombi)',wa:'Merhaba, kombimde sorun var. Mahallem: ',ic:['Kombinizin içi','Fan, eşanjör, brülör, pompa, vana, genleşme tankı. Arızanın hangi parçada olduğunu bulup yerinde onarıyoruz.'],
       msgs:[[15,'Kombi çalışmıyor. Ev hızla soğuyor.'],[18,'Petekler ılık. Bir şeyler eksik.'],[21,'Servis gelince ev yeniden ısınır.'],[24,'Bakımlı kombi evi böyle tutar.'],[99,'Sıcak ve huzurlu bir kış.']]},
-    klima:{min:14,max:34,from:32,to:22,h1:'Ev bunaltıyorsa,',label:'Oda sıcaklığı (klima)',wa:'Merhaba, klimamda sorun var. Mahallem: ',
+    klima:{min:14,max:34,from:32,to:22,h1:'Ev bunaltıyorsa,',label:'Oda sıcaklığı (klima)',wa:'Merhaba, klimamda sorun var. Mahallem: ',ic:['Klimanızın içi','Filtre, evaporatör, fan, bakır borular, kompresör, kondenser. Arızanın hangi parçada olduğunu bulup yerinde onarıyoruz.'],
       msgs:[[17,'Klima ısıtmıyor. Oda buz gibi.'],[20,'Isıtma zayıf. Bakım zamanı.'],[24.5,'Bakımlı klima, ideal oda.'],[28,'Soğutma zayıf. Gaz kontrolü gerek.'],[31,'Klima üflüyor ama soğutmuyor.'],[99,'Klima çalışmıyor. Ev bunaltıcı.']]}
   };
   let mode='kombi', MIN=12, MAX=26; const START=-225, SWEEP=270, C=200, R=168;
@@ -799,6 +909,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     modeBtns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===m));
     document.body.classList.toggle('klima',m==='klima');
     h1t.textContent=MODES[m].h1;
+    const ie=document.getElementById('ic-eb'), ip=document.getElementById('ic-p'); if(ie){ie.textContent=MODES[m].ic[0]; ip.textContent=MODES[m].ic[1]}
     th.setAttribute('aria-label',MODES[m].label); th.setAttribute('aria-valuemin',MIN); th.setAttribute('aria-valuemax',MAX);
     lastMsg=''; showSvc(m);
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a=>a.href='https://wa.me/905452164346?text='+encodeURIComponent(MODES[m].wa));
@@ -829,6 +940,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     const labs=document.querySelectorAll('.boiler-bg .blab,.boiler-bg .blab-line');
     const fan=document.getElementById('b-fan'), pump=document.getElementById('b-pump');
     const flames=document.getElementById('b-flames'), glow=document.getElementById('b-glow');
+    const kAll=document.getElementById('k-all'), kAir=document.getElementById('k-air'), kFan=document.getElementById('k-fan'), flows=document.querySelectorAll('.boiler-bg .flow');
     if(!parts.length) return;
     const ease=t=>1-Math.pow(1-t,2.2);
     const cl=v=>Math.max(0,Math.min(1,v));
@@ -842,13 +954,13 @@ document.addEventListener('DOMContentLoaded',()=>{
       });
       // kapak, gövdenin önünden kayarak açılır: önce hafif öne gelir
       const lo=cl((e-.45)/.35); labs.forEach(l=>l.style.opacity=lo*.9);
-      document.getElementById('b-all').style.transform=`scale(${1-e*.3})`; flames.style.transform=`scale(${1+e*.45})`; glow.setAttribute('opacity',(.35+e*.65).toFixed(2));
+      document.getElementById('b-all').style.transform=`scale(${1-e*.3})`; kAll.style.transform=`scale(${1-e*.3})`; kAir.setAttribute('opacity',(e*.95).toFixed(2)); flows.forEach(f=>f.style.opacity=(e*.9).toFixed(2)); flames.style.transform=`scale(${1+e*.45})`; glow.setAttribute('opacity',(.35+e*.65).toFixed(2));
     }
     function tick(now){
       const dt=Math.min(64,now-last); last=now;
       cur+= (target-cur)*Math.min(1,dt/140);
       const e=ease(cur); draw(e);
-      if(!reduce){ spin+=dt*(.08+e*.5); fan.style.transform=`rotate(${spin}deg)`; pump.style.transform=`rotate(${-spin*1.4}deg)`; }
+      if(!reduce){ spin+=dt*(.08+e*.5); fan.style.transform=`rotate(${spin}deg)`; pump.style.transform=`rotate(${-spin*1.4}deg)`; kFan.style.transform=`rotate(${spin*1.2}deg)`; }
       raf=(Math.abs(target-cur)>.0005||!reduce)?requestAnimationFrame(tick):null;
     }
     const onS=()=>{target=prog(); if(!raf){last=performance.now();raf=requestAnimationFrame(tick)}};
