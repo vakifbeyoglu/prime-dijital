@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sarıyer Kombi Servisi | Kireçburnu, 7/24 kombi bakım ve arıza</title>
+<meta name="description" content="Sarıyer Kombi Servisi: Kireçburnu merkezli, 24 saat açık kombi bakım, arıza onarım ve petek temizliği. Google'da 5,0 puan. 0545 216 43 46">
+<meta name="theme-color" content="#EFF6FF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ── Tasarım sistemi (UI UX Pro Max: Trust & Authority + Conversion) ── */
+:root{
+  --primary:#1E40AF;  --on-primary:#fff;
+  --secondary:#3B82F6;
+  --accent:#C2410C;   --accent-hi:#EA580C;  --on-accent:#fff;   /* turuncu yalnız ana CTA'da */
+  --bg:#EFF6FF;       --fg:#1E3A8A;         --fg-strong:#0F1F4D;
+  --card:#FFFFFF;     --muted:#E9EEF6;      --muted-fg:#475569;
+  --border:#BFDBFE;   --ring:#1E40AF;       --ok:#15803D;
+  --w:0;              /* 0 = soğuk, 1 = sıcak (termostat) */
+  --glass:color-mix(in oklab, white 55%, transparent);
+  --glass-line:color-mix(in oklab, white 75%, transparent);
+  --r-xl:32px; --r-lg:24px; --r-md:16px; --r-pill:999px;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s6:48px; --s8:64px; --s12:96px;
+  --ease-out:cubic-bezier(.22,1,.36,1); --t-fast:160ms; --t-med:280ms;
+  --shadow:0 24px 48px -28px color-mix(in oklab,var(--fg-strong) 45%,transparent);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:88px}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1.0625rem;line-height:1.6;color:var(--fg);
+  background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block}
+:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:12px}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;padding:12px 18px;border-radius:var(--r-md);background:var(--primary);color:#fff;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+
+/* atmosfer: termostat ısındıkça mavi → turuncu */
+.aura{position:fixed;inset:-25vmax;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(38vmax 38vmax at 82% 12%, color-mix(in oklab,var(--accent-hi) calc(var(--w)*40%),transparent), transparent 70%),
+    radial-gradient(44vmax 44vmax at 8% 85%, color-mix(in oklab,var(--secondary) calc((1 - var(--w))*32% + 8%),transparent), transparent 70%),
+    radial-gradient(30vmax 30vmax at 55% 55%, color-mix(in oklab,white 60%,transparent), transparent 70%)}
+@media(prefers-reduced-motion:no-preference){.aura{animation:drift 22s ease-in-out infinite alternate}}
+@keyframes drift{to{transform:translate3d(2vmax,-2vmax,0) scale(1.04)}}
+
+/* ── Butonlar: yumuşak köşe, cam ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-pill);
+  font:600 1rem/1 inherit;font-family:inherit;text-decoration:none;cursor:pointer;color:var(--fg-strong);white-space:nowrap;
+  background:var(--glass);border:1.5px solid color-mix(in oklab,var(--primary) 22%,transparent);
+  backdrop-filter:blur(14px) saturate(1.5);-webkit-backdrop-filter:blur(14px) saturate(1.5);touch-action:manipulation;
+  transition:background-color var(--t-fast) var(--ease-out),border-color var(--t-fast),transform var(--t-fast) var(--ease-out),box-shadow var(--t-med)}
+.btn:hover{background:color-mix(in oklab,white 85%,transparent);border-color:var(--primary)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.cta{color:var(--on-accent);border-color:transparent;
+  background:linear-gradient(135deg,color-mix(in oklab,var(--accent-hi) 92%,transparent),color-mix(in oklab,var(--accent) 96%,transparent));
+  box-shadow:0 14px 30px -14px color-mix(in oklab,var(--accent) 80%,transparent), inset 0 1px 0 color-mix(in oklab,white 35%,transparent)}
+.btn.cta:hover{box-shadow:0 18px 36px -14px color-mix(in oklab,var(--accent) 95%,transparent), inset 0 1px 0 color-mix(in oklab,white 45%,transparent);transform:translateY(-1px)}
+.btn.cta:active{transform:scale(.97)}
+.btn.blue{color:var(--primary);background:color-mix(in oklab,var(--secondary) 10%,transparent);border-color:color-mix(in oklab,var(--primary) 40%,transparent)}
+.btn.blue:hover{background:color-mix(in oklab,var(--secondary) 18%,transparent);border-color:var(--primary)}
+/* CTA nabzı: yalnız ana butonda, sınırlı */
+@media(prefers-reduced-motion:no-preference){
+  .pulse{position:relative;isolation:isolate}
+  .pulse::after{content:"";position:absolute;inset:-2px;border-radius:inherit;z-index:-1;box-shadow:0 0 0 0 color-mix(in oklab,var(--accent-hi) 55%,transparent);animation:ring 2.6s var(--ease-out) 1.6s 4}
+}
+@keyframes ring{70%,100%{box-shadow:0 0 0 14px transparent}}
+
+/* ── Üst çubuk ── */
+.top{position:sticky;top:0;z-index:40;padding:12px 0;transition:background-color var(--t-med),box-shadow var(--t-med)}
+.top.scrolled{background:color-mix(in oklab,var(--bg) 72%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
+  box-shadow:0 1px 0 color-mix(in oklab,var(--primary) 12%,transparent)}
+.top .wrap{display:flex;align-items:center;gap:var(--s3)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:var(--fg-strong);margin-right:auto}
+.brand svg{width:38px;height:38px}
+.nav{display:flex;gap:4px}
+.nav a{padding:10px 14px;border-radius:var(--r-pill);text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted-fg);transition:color var(--t-fast),background-color var(--t-fast)}
+.nav a:hover{color:var(--fg-strong);background:color-mix(in oklab,white 60%,transparent)}
+.top .btn{min-height:46px;padding:0 20px}
+@media(max-width:960px){.nav{display:none}}
+
+/* ── HERO ── */
+.hero{padding:clamp(24px,5vw,64px) 0 clamp(48px,7vw,96px);display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(32px,5vw,72px);align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;border-radius:var(--r-pill);font-size:.92rem;font-weight:600;color:var(--fg-strong);
+  background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 color-mix(in oklab,var(--ok) 50%,transparent)}
+@media(prefers-reduced-motion:no-preference){.dot{animation:live 2s ease-out infinite}}
+@keyframes live{70%,100%{box-shadow:0 0 0 8px transparent}}
+.hero h1{margin-top:var(--s3);font-size:clamp(2.6rem,6vw,4.9rem);line-height:1.02;font-weight:800;letter-spacing:-.04em;color:var(--fg-strong);text-wrap:balance}
+.hero h1 .num{display:block;text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap;
+  background:linear-gradient(100deg,var(--primary) 0%,var(--secondary) 45%,var(--accent-hi) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:240% 100%;background-position:calc(100% - var(--w)*100%) 0;transition:background-position .6s var(--ease-out)}
+.lead{margin-top:var(--s3);max-width:46ch;font-size:1.15rem;color:var(--muted-fg)}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s4)}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);margin-top:var(--s4);font-size:.95rem;color:var(--muted-fg)}
+.trust .g{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--fg-strong)}
+.stars{display:inline-flex;gap:2px;color:#F59E0B}
+.stars svg{width:18px;height:18px}
+
+/* ── TERMOSTAT ── */
+.thermo-box{justify-self:center;width:min(430px,100%)}
+.thermo{width:100%;aspect-ratio:1;position:relative;border-radius:50%;
+  background:radial-gradient(circle at 34% 28%, color-mix(in oklab,white 92%,transparent), color-mix(in oklab,white 45%,transparent) 72%);
+  border:1px solid var(--glass-line);box-shadow:0 50px 90px -40px color-mix(in oklab,var(--fg-strong) 55%,transparent), inset 0 2px 0 white;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);touch-action:none;user-select:none;-webkit-user-select:none}
+.thermo::before{content:"";position:absolute;inset:11%;border-radius:50%;border:1px dashed color-mix(in oklab,var(--primary) 18%,transparent)}
+.thermo > svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.track{fill:none;stroke:color-mix(in oklab,var(--primary) 10%,transparent);stroke-width:14;stroke-linecap:round}
+.arc{fill:none;stroke:url(#flame);stroke-width:14;stroke-linecap:round}
+.knob{fill:white;stroke:var(--fg-strong);stroke-width:2;cursor:grab;filter:drop-shadow(0 4px 8px rgba(15,31,77,.28))}
+.knob:active{cursor:grabbing}
+.read{position:absolute;inset:0;display:grid;place-content:center;text-align:center;pointer-events:none}
+.read .t{font-size:clamp(4rem,11vw,6rem);font-weight:300;line-height:1;letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:var(--fg-strong)}
+.read .t sup{font-size:.38em;font-weight:600;vertical-align:1em;margin-left:2px;letter-spacing:0}
+.read .s{margin:8px auto 0;font-size:.95rem;font-weight:500;color:var(--muted-fg);max-width:18ch;min-height:3em}
+.flameico{width:34px;height:44px;margin:0 auto 6px;transform-origin:50% 100%;transform:scale(calc(.55 + var(--w)*.6));transition:transform .5s var(--ease-out)}
+.flameico .o{fill:var(--secondary)}.flameico .c{fill:#BFDBFE}.flameico .tp{fill:var(--accent-hi);opacity:var(--w)}
+@media(prefers-reduced-motion:no-preference){.flameico{animation:lick 1.4s ease-in-out infinite alternate}}
+@keyframes lick{to{transform:scale(calc(.58 + var(--w)*.6),calc(.52 + var(--w)*.62)) skewX(-3deg)}}
+.steps{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);display:flex;gap:12px}
+.steps button{width:48px;height:48px;border-radius:50%;font:500 1.5rem/1 inherit;font-family:inherit;color:var(--fg-strong);cursor:pointer;touch-action:manipulation;
+  background:var(--glass);border:1.5px solid color-mix(in oklab,var(--primary) 22%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  transition:border-color var(--t-fast),transform var(--t-fast)}
+.steps button:hover{border-color:var(--primary)}
+.steps button:active{transform:scale(.92)}
+.hint{text-align:center;margin-top:14px;font-size:.88rem;color:var(--muted-fg)}
+
+/* ── KANIT ŞERİDİ ── */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2)}
+@media(max-width:820px){.proof{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:var(--s3);border-radius:var(--r-lg);background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  transition:transform var(--t-med) var(--ease-out),box-shadow var(--t-med)}
+.stat:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.stat .ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:color-mix(in oklab,var(--secondary) 12%,transparent);color:var(--primary)}
+.stat .ico svg{width:22px;height:22px}
+.stat b{display:block;margin-top:var(--s2);font-size:clamp(1.9rem,3.6vw,2.5rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--fg-strong);font-variant-numeric:tabular-nums}
+.stat > span:not(.ico){display:block;margin-top:6px;font-size:.95rem;color:var(--muted-fg)}
+
+/* ── Bölümler ── */
+section{padding:clamp(64px,9vw,112px) 0}
+.eyebrow{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--secondary)}
+h2{margin-top:12px;font-size:clamp(2rem,4vw,3rem);line-height:1.08;font-weight:800;letter-spacing:-.035em;color:var(--fg-strong);max-width:22ch;text-wrap:balance}
+.sub{margin-top:var(--s2);color:var(--muted-fg);max-width:54ch}
+
+/* belirtiler */
+.symptoms{margin-top:var(--s6);border-radius:var(--r-xl);overflow:hidden;background:color-mix(in oklab,white 62%,transparent);border:1px solid var(--glass-line);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+.symptoms details{border-top:1px solid color-mix(in oklab,var(--primary) 10%,transparent)}
+.symptoms details:first-child{border-top:0}
+.symptoms summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--s3);padding:22px clamp(20px,3vw,36px);transition:background-color var(--t-fast)}
+.symptoms summary:hover{background:color-mix(in oklab,var(--secondary) 5%,transparent)}
+.symptoms summary::-webkit-details-marker{display:none}
+.symptoms .q{font-size:clamp(1.1rem,2vw,1.35rem);font-weight:700;letter-spacing:-.015em;color:var(--fg-strong)}
+.symptoms .ic{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:color-mix(in oklab,var(--secondary) 12%,transparent);color:var(--primary);transition:background-color var(--t-med),color var(--t-med)}
+.symptoms details[open] .ic{background:var(--primary);color:#fff}
+.symptoms .ic svg{width:24px;height:24px}
+.plus{width:36px;height:36px;border-radius:50%;border:1.5px solid color-mix(in oklab,var(--primary) 25%,transparent);position:relative;transition:transform .35s var(--ease-out),background-color .3s}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:var(--fg-strong);border-radius:2px;transform:translate(-50%,-50%)}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] .plus{transform:rotate(45deg);background:color-mix(in oklab,var(--accent-hi) 18%,transparent)}
+.ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease-out)}
+details[open] .ans{grid-template-rows:1fr}
+.ans>div{overflow:hidden}
+.ans p{padding:0 clamp(20px,3vw,36px) 26px calc(clamp(20px,3vw,36px) + 72px);max-width:74ch;color:var(--muted-fg)}
+@media(max-width:560px){.ans p{padding-left:clamp(20px,3vw,36px)}}
+
+/* süreç */
+.process{margin-top:var(--s6);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);counter-reset:st;position:relative}
+@media(max-width:900px){.process{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.process{grid-template-columns:1fr}}
+.step{position:relative;padding:var(--s4) var(--s3) var(--s3);border-radius:var(--r-lg);background:var(--card);border:1px solid color-mix(in oklab,var(--primary) 10%,transparent);
+  transition:transform var(--t-med) var(--ease-out),box-shadow var(--t-med),border-color var(--t-med)}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--border)}
+.step::before{counter-increment:st;content:"0" counter(st);position:absolute;top:18px;right:22px;font-size:2.4rem;font-weight:800;letter-spacing:-.05em;line-height:1;
+  color:color-mix(in oklab,var(--primary) 10%,transparent)}
+.step .ico{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--secondary),var(--primary))}
+.step:last-child .ico{background:linear-gradient(135deg,var(--accent-hi),var(--accent))}
+.step .ico svg{width:24px;height:24px}
+.step h3{margin-top:var(--s3);font-size:1.18rem;font-weight:700;letter-spacing:-.015em;color:var(--fg-strong)}
+.step p{margin-top:8px;font-size:.98rem;color:var(--muted-fg)}
+
+/* yorumlar */
+.rv-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:var(--s3)}
+.score{display:flex;align-items:center;gap:var(--s2);padding:14px 22px;border-radius:var(--r-lg);background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.score b{font-size:2.6rem;font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--fg-strong)}
+.score small{display:block;color:var(--muted-fg);font-size:.9rem}
+.reviews{display:grid;grid-template-columns:1.25fr 1fr;gap:var(--s2);margin-top:var(--s6)}
+@media(max-width:860px){.reviews{grid-template-columns:1fr}}
+.rv{border-radius:var(--r-xl);padding:clamp(24px,3.5vw,40px);background:color-mix(in oklab,white 66%,transparent);border:1px solid var(--glass-line);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;flex-direction:column;gap:var(--s3);transition:transform var(--t-med) var(--ease-out),box-shadow var(--t-med)}
+.rv:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.rv.big{grid-row:span 2;color:#E0E7FF;border-color:transparent;background:linear-gradient(150deg,var(--fg-strong),var(--primary))}
+.rv blockquote{font-size:1.1rem;line-height:1.55;color:var(--fg-strong)}
+.rv.big blockquote{color:#fff;font-size:clamp(1.4rem,2.5vw,1.9rem);line-height:1.32;font-weight:600;letter-spacing:-.02em}
+.rv footer{margin-top:auto;display:flex;align-items:center;gap:12px;font-size:.95rem}
+.av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:var(--primary);background:color-mix(in oklab,var(--secondary) 16%,transparent);flex:none}
+.rv.big .av{color:#fff;background:color-mix(in oklab,white 18%,transparent)}
+.rv footer strong{display:block;color:var(--fg-strong)}
+.rv.big footer strong{color:#fff}
+.rv footer span{font-size:.88rem;color:var(--muted-fg)}
+.rv.big footer span{color:#C7D2FE}
+.note{margin-top:var(--s2);font-size:.88rem;color:var(--muted-fg)}
+
+/* hizmet bölgesi */
+.area{margin-top:var(--s4);display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.area li{padding:10px 18px;border-radius:var(--r-pill);font-weight:500;font-size:.96rem;color:var(--fg-strong);background:var(--glass);border:1px solid var(--glass-line);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background-color var(--t-fast),border-color var(--t-fast),color var(--t-fast)}
+.area li:hover{border-color:var(--secondary)}
+.area li.home{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* iletişim */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--s2);margin-top:var(--s6)}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.card{border-radius:var(--r-xl);padding:clamp(24px,3.5vw,40px);background:color-mix(in oklab,white 66%,transparent);border:1px solid var(--glass-line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+.card dl{display:grid;gap:var(--s3)}
+.card .row{display:grid;grid-template-columns:auto 1fr;gap:var(--s2);align-items:start}
+.card .row .ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:color-mix(in oklab,var(--secondary) 12%,transparent);color:var(--primary)}
+.card .row .ico svg{width:22px;height:22px}
+.card dt{font-size:.88rem;color:var(--muted-fg)}
+.card dd{font-size:1.15rem;font-weight:700;color:var(--fg-strong);margin-top:2px}
+.card dd a{text-decoration:none}
+.card .acts{margin-top:var(--s4)}
+.map{border-radius:var(--r-xl);overflow:hidden;min-height:380px;border:1px solid var(--glass-line);box-shadow:var(--shadow);background:var(--muted)}
+.map iframe{display:block;width:100%;height:100%;min-height:380px;border:0;filter:saturate(.7) contrast(1.03)}
+
+/* son çağrı */
+.final{margin-top:0;padding:clamp(36px,6vw,64px);border-radius:var(--r-xl);text-align:center;color:#fff;position:relative;overflow:hidden;
+  background:radial-gradient(60% 120% at 85% 0%, color-mix(in oklab,var(--accent-hi) 55%,transparent), transparent 60%), linear-gradient(140deg,var(--fg-strong),var(--primary))}
+.final h2{color:#fff;margin-inline:auto}
+.final p{margin:var(--s2) auto 0;max-width:48ch;color:#C7D2FE}
+.final .acts{justify-content:center}
+.final .btn:not(.cta){color:#fff;background:color-mix(in oklab,white 12%,transparent);border-color:color-mix(in oklab,white 35%,transparent)}
+.final .btn:not(.cta):hover{background:color-mix(in oklab,white 22%,transparent);border-color:#fff}
+
+.foot{padding:var(--s4) 0 120px;font-size:.92rem;color:var(--muted-fg)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s2);border-top:1px solid color-mix(in oklab,var(--primary) 12%,transparent);padding-top:var(--s3)}
+
+/* mobil alt çubuk */
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;display:none;gap:10px;padding:8px;border-radius:var(--r-pill);
+  background:color-mix(in oklab,var(--bg) 62%,transparent);border:1px solid var(--glass-line);
+  backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);box-shadow:0 20px 40px -18px rgba(15,31,77,.5);
+  transform:translateY(0);transition:transform var(--t-med) var(--ease-out)}
+.dock .btn{flex:1;min-height:50px;padding:0 12px}
+@media(max-width:760px){.dock{display:flex}.top .btn{display:none}}
+
+/* JS yoksa her şey görünür; GSAP yalnız varsa gizleyip gösterir */
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<div class="aura" aria-hidden="true"></div>
+
+<!-- tekrar kullanılan ikonlar -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.1 8.1 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 1 0-7h8"/></g></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Sarıyer Kombi Servisi, sayfa başı">
+      <svg viewBox="0 0 38 38" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#1E40AF"/></linearGradient></defs><rect width="38" height="38" rx="12" fill="url(#lg)"/><path d="M19 8c3.4 4.5 6.8 7.3 6.8 12.4a6.8 6.8 0 0 1-13.6 0c0-2.7 1.4-4.5 3-6.1.2 2 1.1 3.4 2.5 3.8C17.4 14.6 18 11.3 19 8z" fill="#fff"/><path d="M19 17.6c1.6 2 2.9 3.4 2.9 5.4a2.9 2.9 0 0 1-5.8 0c0-1.8 1.3-3.2 2.9-5.4z" fill="#FDBA74"/></svg>
+      Sarıyer Kombi Servisi
+    </a>
+    <nav class="nav" aria-label="Sayfa bölümleri">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#surec">Nasıl çalışıyoruz</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+    <a class="btn cta" href="tel:+905452164346"><svg aria-hidden="true"><use href="#i-phone"/></svg>Hemen ara</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap hero">
+    <div>
+      <span class="badge h-in"><span class="dot" aria-hidden="true"></span>Şu an açık · 24 saat hizmet</span>
+      <h1 class="h-in">Ev soğuksa,<a class="num" href="tel:+905452164346" aria-label="0545 216 43 46 numarasını ara">0545 216 43 46</a></h1>
+      <p class="lead h-in">Kireçburnu'ndaki ekibimiz Sarıyer'in her mahallesine kombi bakımı ve arıza onarımı için geliyor. Gece yarısı da, sabahın erken saatinde de telefonu açıyoruz.</p>
+      <div class="acts h-in">
+        <a class="btn cta pulse" href="tel:+905452164346"><svg aria-hidden="true"><use href="#i-phone"/></svg>Servis çağır</a>
+        <a class="btn" href="https://wa.me/905452164346?text=Merhaba%2C%20kombim%20i%C3%A7in%20servis%20istiyorum." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp'tan yaz</a>
+      </div>
+      <div class="trust h-in">
+        <span class="g"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>5,0 Google puanı</span>
+        <span>14 müşteri yorumu</span>
+      </div>
+    </div>
+
+    <div class="thermo-box h-dial">
+      <div class="thermo" id="thermo" role="slider" tabindex="0" aria-label="Oda sıcaklığı" aria-valuemin="12" aria-valuemax="26" aria-valuenow="14" aria-valuetext="14 derece">
+        <svg viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <linearGradient id="flame" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#93C5FD"/><stop offset=".5" stop-color="#3B82F6"/><stop offset="1" stop-color="#EA580C"/>
+            </linearGradient>
+          </defs>
+          <path class="track" id="track" d=""/>
+          <path class="arc" id="arc" d=""/>
+          <circle class="knob" id="knob" r="17" cx="0" cy="0"/>
+        </svg>
+        <div class="read">
+          <svg class="flameico" viewBox="0 0 34 44" aria-hidden="true"><path class="o" d="M17 1c5 7 13 12 13 24a13 13 0 0 1-26 0c0-5.5 2.6-9.2 5.8-12 .3 4 2 6.6 4.6 7.6C13.6 14 14.4 7.2 17 1z"/><path class="c" d="M17 20c3 3.8 6 6.6 6 10.5a6 6 0 0 1-12 0c0-3.6 2.8-6.3 6-10.5z"/><path class="tp" d="M17 1c1.6 2.3 3.2 4.2 4.6 6-1.8.6-3.4.4-4.8-.6C16 5 16.3 3 17 1z"/></svg>
+          <div class="t" id="temp">14<sup>°C</sup></div>
+          <div class="s" id="msg" aria-live="polite">Kombi çalışmıyor. Ev hızla soğuyor.</div>
+        </div>
+        <div class="steps">
+          <button type="button" id="down" aria-label="Sıcaklığı azalt">−</button>
+          <button type="button" id="up" aria-label="Sıcaklığı artır">+</button>
+        </div>
+      </div>
+      <p class="hint">Kadranı çevirin ya da + / − ile deneyin</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ul class="proof" aria-label="Öne çıkan bilgiler" style="list-style:none">
+      <li class="stat rv-in"><span class="ico" aria-hidden="true"><svg><use href="#i-star"/></svg></span><b><span class="count" data-to="5" data-dec="1">5,0</span></b><span>Google puanı</span></li>
+      <li class="stat rv-in"><span class="ico" aria-hidden="true"><svg><use href="#i-chat"/></svg></span><b><span class="count" data-to="14">14</span></b><span>Gerçek müşteri yorumu</span></li>
+      <li class="stat rv-in"><span class="ico" aria-hidden="true"><svg><use href="#i-clock"/></svg></span><b>7/24</b><span>Her gün, gece dahil</span></li>
+      <li class="stat rv-in"><span class="ico" aria-hidden="true"><svg><use href="#i-shield"/></svg></span><b>Garanti</b><span>Yapılan işe garanti</span></li>
+    </ul>
+  </div>
+
+  <section id="hizmetler">
+    <div class="wrap">
+      <span class="eyebrow rv-in">Hizmetler</span>
+      <h2 class="rv-in">Evde neyle karşılaştınız?</h2>
+      <p class="sub rv-in">Sorunu seçin, nasıl çözdüğümüzü görün. Emin değilseniz arayın, telefonda birlikte bakalım.</p>
+
+      <div class="symptoms rv-in">
+        <details open>
+          <summary><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.7S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.3-6-11.3z"/><path d="M4 4l16 16"/></svg></span><span class="q">Sıcak su gelmiyor</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><div><p>Kombinin ateşleme, akış sensörü ve üç yollu vanasını kontrol ediyor, arızalı parçayı yerinde değiştiriyoruz. Çoğu durumda sıcak su aynı ziyarette geri geliyor.</p></div></div>
+        </details>
+        <details>
+          <summary><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M8 5v14M12 5v14M16 5v14"/></svg></span><span class="q">Petekler ısınmıyor ya da yarım ısınıyor</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><div><p>Altı soğuk kalan petekler genelde tortu ve havadan kaynaklanır. Petek ve tesisat temizliği yapıyor, sistemin havasını alıp dengesini ayarlıyoruz.</p></div></div>
+        </details>
+        <details>
+          <summary><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 13l3-3M12 2v3"/></svg></span><span class="q">Basınç sürekli düşüyor</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><div><p>Kaçağı buluyor, genleşme tankını ve emniyet ventilini test ediyoruz. Sadece su basıp geçmiyor, düşüşün sebebini çözüyoruz.</p></div></div>
+        </details>
+        <details>
+          <summary><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="4"/><path d="M9 9h6M12 13v3"/></svg></span><span class="q">Kombi hata kodu verdi</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><div><p>Ekrandaki kodu telefonda söyleyin. Gerekirse parçasıyla birlikte geliyor, arızayı giderip size ne yapıldığını anlatıyoruz.</p></div></div>
+        </details>
+        <details>
+          <summary><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><span class="q">Kış öncesi bakım zamanı</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><div><p>Yıllık bakımda brülör ve eşanjör temizliği, gaz ayarı ve baca kontrolü yapıyoruz. Bakımlı kombi daha az yakar, kışın ortasında sizi yarı yolda bırakmaz.</p></div></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="surec" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow rv-in">Nasıl çalışıyoruz</span>
+      <h2 class="rv-in">Aradığınız andan, ev ısınana kadar</h2>
+      <ol class="process" style="list-style:none">
+        <li class="step st-in"><span class="ico" aria-hidden="true"><svg><use href="#i-phone"/></svg></span><h3>Arayın ya da yazın</h3><p>Günün her saati telefonu açıyoruz. Sorunu kısaca anlatın, hata kodunu söyleyin.</p></li>
+        <li class="step st-in"><span class="ico" aria-hidden="true"><svg><use href="#i-route"/></svg></span><h3>Söz verdiğimiz saatte geliriz</h3><p>Kireçburnu'ndan yola çıkıyor, Sarıyer içinde belirttiğimiz saatte kapınızda oluyoruz.</p></li>
+        <li class="step st-in"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><h3>Yerinde onarım</h3><p>Arızayı tespit edip işe başlamadan önce ne yapacağımızı anlatıyoruz.</p></li>
+        <li class="step st-in"><span class="ico" aria-hidden="true"><svg><use href="#i-shield"/></svg></span><h3>Garantili teslim</h3><p>İş bitince bilgi veriyor, yapılan işe garanti veriyoruz.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="yorumlar" style="padding-top:0">
+    <div class="wrap">
+      <div class="rv-head">
+        <div>
+          <span class="eyebrow rv-in">Yorumlar</span>
+          <h2 class="rv-in">Komşularınız ne diyor?</h2>
+        </div>
+        <div class="score rv-in">
+          <b>5,0</b>
+          <div><span class="stars" aria-label="5 üzerinden 5 yıldız"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><small>Google'da 14 yorum</small></div>
+        </div>
+      </div>
+
+      <div class="reviews">
+        <article class="rv big st-in">
+          <span class="stars" aria-label="5 yıldız"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote>“Belirttikleri saatte adresime geldiler ve bakım işlemlerini titizlikle, bütçemi zorlamayan uygun bir fiyatla gerçekleştirdiler.”</blockquote>
+          <footer><span class="av" aria-hidden="true">N</span><div><strong>Nes T.</strong><span>Kombi bakımı</span></div></footer>
+        </article>
+        <article class="rv st-in">
+          <span class="stars" aria-label="5 yıldız"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote>“Kombimiz bozuldu, aradık, çok bekletmeden geldiler. Sorunu da hemen çözdüler.”</blockquote>
+          <footer><span class="av" aria-hidden="true">H</span><div><strong>Harun K.</strong><span>Arıza onarımı</span></div></footer>
+        </article>
+        <article class="rv st-in">
+          <span class="stars" aria-label="5 yıldız"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote>“Sabah çok erken saatte ulaştık, hemen ekip geldi. İşi bitirip bilgi verdi, garanti de verdi.”</blockquote>
+          <footer><span class="av" aria-hidden="true">P</span><div><strong>Pakize K.</strong><span>Sabah erken servis</span></div></footer>
+        </article>
+      </div>
+      <p class="note">Yorumlar Google Haritalar'daki müşteri değerlendirmelerinden alınmıştır.</p>
+    </div>
+  </section>
+
+  <section id="iletisim" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow rv-in">Hizmet bölgesi</span>
+      <h2 class="rv-in">Kireçburnu'ndayız, Sarıyer'in her yerine geliyoruz</h2>
+      <ul class="area" aria-label="Hizmet verilen mahalleler">
+        <li class="home st-in">Kireçburnu</li><li class="st-in">Tarabya</li><li class="st-in">Yeniköy</li><li class="st-in">İstinye</li><li class="st-in">Emirgan</li>
+        <li class="st-in">Büyükdere</li><li class="st-in">Sarıyer Merkez</li><li class="st-in">Rumelihisarı</li><li class="st-in">Maslak</li><li class="st-in">Bahçeköy</li>
+        <li class="st-in">Zekeriyaköy</li><li class="st-in">Rumelifeneri</li>
+      </ul>
+
+      <div class="contact">
+        <div class="card rv-in">
+          <dl>
+            <div class="row"><span class="ico" aria-hidden="true"><svg><use href="#i-phone"/></svg></span><div><dt>Telefon</dt><dd><a href="tel:+905452164346">0545 216 43 46</a></dd></div></div>
+            <div class="row"><span class="ico" aria-hidden="true"><svg><use href="#i-pin"/></svg></span><div><dt>Adres</dt><dd>Prof. Dr. Aykut Barka Cd. 29/A, Kireçburnu, 34453 Sarıyer/İstanbul</dd></div></div>
+            <div class="row"><span class="ico" aria-hidden="true"><svg><use href="#i-clock"/></svg></span><div><dt>Çalışma saatleri</dt><dd>Her gün, 24 saat</dd></div></div>
+          </dl>
+          <div class="acts">
+            <a class="btn cta" href="tel:+905452164346"><svg aria-hidden="true"><use href="#i-phone"/></svg>Hemen ara</a>
+            <a class="btn" href="https://wa.me/905452164346" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+            <a class="btn blue" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.144361,29.047321" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-route"/></svg>Yol tarifi</a>
+          </div>
+        </div>
+        <div class="map rv-in"><iframe loading="lazy" title="Sarıyer Kombi Servisi haritada" src="https://maps.google.com/maps?q=41.144361,29.047321&amp;z=16&amp;output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="final rv-in">
+        <h2>Kombi bozulduysa beklemeyin</h2>
+        <p>Gece ya da gündüz, bir telefonla Sarıyer'in her yerine geliyoruz.</p>
+        <div class="acts">
+          <a class="btn cta" href="tel:+905452164346"><svg aria-hidden="true"><use href="#i-phone"/></svg>0545 216 43 46</a>
+          <a class="btn" href="https://wa.me/905452164346?text=Merhaba%2C%20kombim%20i%C3%A7in%20servis%20istiyorum." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp'tan yaz</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap"><span>© <span id="y"></span> Sarıyer Kombi Servisi</span><span>Kireçburnu, Sarıyer/İstanbul · 7/24</span></div></footer>
+
+<nav class="dock" aria-label="Hızlı iletişim">
+  <a class="btn cta" href="tel:+905452164346"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ara</a>
+  <a class="btn" href="https://wa.me/905452164346" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root=document.documentElement;
+
+  /* ── Termostat ── */
+  const MIN=12, MAX=26, START=-225, SWEEP=270, C=200, R=168;
+  const th=document.getElementById('thermo');
+  const arc=document.getElementById('arc'), track=document.getElementById('track'), knob=document.getElementById('knob');
+  const tEl=document.getElementById('temp'), mEl=document.getElementById('msg');
+  const pt=a=>{const r=a*Math.PI/180;return [C+R*Math.cos(r), C+R*Math.sin(r)]};
+  const path=(a0,a1)=>{const [x0,y0]=pt(a0),[x1,y1]=pt(a1);const large=(a1-a0)>180?1:0;return `M${x0} ${y0} A${R} ${R} 0 ${large} 1 ${x1} ${y1}`};
+  track.setAttribute('d',path(START,START+SWEEP));
+  const msgs=[[15,'Kombi çalışmıyor. Ev hızla soğuyor.'],[18,'Petekler ılık. Bir şeyler eksik.'],[21,'Servis yolda, ısınma başladı.'],[24,'Bakımlı kombi evi böyle tutar.'],[99,'Sıcak ve huzurlu bir kış.']];
+  let val=14, lastMsg='';
+  function set(v){
+    val=Math.max(MIN,Math.min(MAX,Math.round(v*2)/2));
+    const f=(val-MIN)/(MAX-MIN), a=START+SWEEP*f;
+    arc.setAttribute('d', f<=0.001? '' : path(START,a));
+    const [x,y]=pt(a); knob.setAttribute('cx',x); knob.setAttribute('cy',y);
+    const txt=String(val).replace('.',',');
+    tEl.firstChild.nodeValue=txt;
+    const m=msgs.find(m=>val<m[0])[1]; if(m!==lastMsg){mEl.textContent=m;lastMsg=m}
+    root.style.setProperty('--w',f.toFixed(3));
+    th.setAttribute('aria-valuenow',val); th.setAttribute('aria-valuetext',txt+' derece');
+  }
+  set(val);
+  let drag=false, intro=null;
+  function fromEvent(e){
+    const b=th.getBoundingClientRect(), x=e.clientX-b.left-b.width/2, y=e.clientY-b.top-b.height/2;
+    let rel=((Math.atan2(y,x)*180/Math.PI-START)%360+360)%360;
+    if(rel>SWEEP){ rel = rel-SWEEP < (360-SWEEP)/2 ? SWEEP : 0; }
+    set(MIN+(MAX-MIN)*rel/SWEEP);
+  }
+  const stopIntro=()=>{ if(intro){cancelAnimationFrame(intro);intro=null} };
+  th.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;stopIntro();drag=true;th.setPointerCapture(e.pointerId);fromEvent(e)});
+  th.addEventListener('pointermove',e=>{if(drag)fromEvent(e)});
+  th.addEventListener('pointerup',()=>drag=false);
+  th.addEventListener('pointercancel',()=>drag=false);
+  document.getElementById('up').onclick=()=>{stopIntro();set(val+1)};
+  document.getElementById('down').onclick=()=>{stopIntro();set(val-1)};
+  th.addEventListener('keydown',e=>{
+    if(['ArrowUp','ArrowRight'].includes(e.key)){stopIntro();set(val+.5);e.preventDefault()}
+    if(['ArrowDown','ArrowLeft'].includes(e.key)){stopIntro();set(val-.5);e.preventDefault()}
+    if(e.key==='Home'){stopIntro();set(MIN);e.preventDefault()} if(e.key==='End'){stopIntro();set(MAX);e.preventDefault()}
+  });
+  if(!reduce){
+    const from=14,to=22,dur=2200;let t0;
+    const step=t=>{t0??=t;const p=Math.min(1,(t-t0)/dur);set(from+(to-from)*(1-Math.pow(1-p,3)));intro=p<1?requestAnimationFrame(step):null};
+    setTimeout(()=>{intro=requestAnimationFrame(step)},900);
+  } else set(22);
+
+  /* ── Üst çubuk gölgesi ── */
+  const top=document.getElementById('top');
+  const onScroll=()=>top.classList.toggle('scrolled',scrollY>8);
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  document.getElementById('y').textContent=new Date().getFullYear();
+
+  /* ── GSAP animasyonları (yüklenmezse içerik zaten görünür) ── */
+  if(reduce || !window.gsap) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // hero: kademeli giriş
+  gsap.from('.h-in',{opacity:0,y:18,duration:.7,stagger:.09,ease:'power3.out',delay:.1});
+  gsap.from('.h-dial',{opacity:0,scale:.92,rotate:-8,duration:1.1,ease:'expo.out',delay:.25});
+
+  // tekil öğeler: hafif yukarı kayarak belirme
+  gsap.utils.toArray('.rv-in').forEach(el=>{
+    gsap.from(el,{opacity:0,y:14,duration:.5,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}});
+  });
+  // gruplar: dalga halinde (Stagger List)
+  ['.proof','.process','.reviews','.area'].forEach(sel=>{
+    const box=document.querySelector(sel); if(!box) return;
+    const items=box.querySelectorAll('.stat,.st-in');
+    gsap.from(items,{opacity:0,scale:.94,y:16,duration:.45,stagger:{each:.06,from:'start'},ease:'back.out(1.4)',
+      scrollTrigger:{trigger:box,start:'top 88%',once:true}});
+  });
+  // sayaçlar
+  document.querySelectorAll('.count').forEach(el=>{
+    const to=+el.dataset.to, dec=+(el.dataset.dec||0), o={v:0};
+    gsap.to(o,{v:to,duration:1.4,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 92%',once:true},
+      onUpdate:()=>{el.textContent=o.v.toFixed(dec).replace('.',',')}});
+  });
+});
+</script>
+</body>
+</html>
