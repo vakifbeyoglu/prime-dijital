@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Hub Maslak | Sanayinin içinde bir vaha</title>
+<meta name="description" content="Maslak Atatürk Oto Sanayi Sitesi içinde kafe. Somon tabağı, banana bread, el yapımı limonata. Park sorunu yok.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--concrete:#2A2D2E;--concrete2:#3A3E3F;--cream:#F4F1E8;--ink:#17201A;--soft:#5C6B60;--sage:#9DBF8F;--leaf:#3F7A4A;--hib:#A3134A;--hib-ink:#fff;--line:#DDD8C9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+a{color:inherit}.wrap{width:min(1140px,100% - 32px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:18px;font-weight:600;text-decoration:none;transition:transform .2s,background .2s}
+.btn:active{transform:scale(.97)}.btn:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
+.btn-main{background:var(--hib);color:var(--hib-ink)}.btn-main:hover{background:#8a0f3e}
+.btn-glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;backdrop-filter:blur(10px)}
+.btn-line{border:1.5px solid var(--ink)}
+/* oasis hero: concrete turns green with scroll */
+.oasis{height:180vh;position:relative;background:var(--concrete)}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;color:#fff;display:grid;place-items:center}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:64px 64px;opacity:calc(1 - var(--p,0))}
+.green{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 110%,#3F7A4A,#24432b 60%,#1a2c1e);opacity:var(--p,0)}
+.leaves{position:absolute;inset:0;pointer-events:none}
+.leaves g{transform-origin:var(--ox) var(--oy);transform:scale(calc(.05 + var(--p,0)*1)) rotate(calc((1 - var(--p,0))*-30deg));transition:transform .1s linear}
+.leaves path{animation:rustle 6s ease-in-out infinite alternate}
+@keyframes rustle{to{transform:rotate(3deg)}}
+.top{position:absolute;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px max(16px,calc((100% - 1140px)/2));z-index:3}
+.logo{font:800 22px/1 "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.3px}
+.logo span{color:var(--sage)}
+.copy{position:relative;z-index:2;text-align:center;padding:0 16px;max-width:900px}
+.copy small{display:inline-block;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-weight:600;font-size:14px}
+h1{font:800 clamp(46px,8vw,108px)/.95 "Bricolage Grotesque",sans-serif;margin:18px 0;letter-spacing:-1.5px}
+h1 .a{display:block;color:#C9CCCC;transition:opacity .2s}
+h1 .b{display:block;color:var(--sage)}
+.copy p{font-size:19px;color:#D9DEDA;max-width:40ch;margin:0 auto 26px}
+.copy .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+section{padding:84px 0}
+h2{font:800 clamp(34px,5vw,60px)/1 "Bricolage Grotesque",sans-serif;margin:0 0 14px;letter-spacing:-1px}
+.sub{color:var(--soft);max-width:56ch;margin:0 0 32px}
+.plates{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.plate{border-radius:26px;padding:22px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:10px;transition:transform .25s,box-shadow .25s}
+.plate:hover{transform:translateY(-4px);box-shadow:0 16px 30px -18px rgba(23,32,26,.35)}
+.plate .art{aspect-ratio:1;border-radius:50%;background:var(--cream);display:grid;place-items:center}
+.plate .art svg{width:72%}
+.plate h3{margin:4px 0 0;font:800 22px/1.15 "Bricolage Grotesque",sans-serif}
+.plate p{margin:0;color:var(--soft);font-size:15px}
+.big{grid-column:span 2;grid-row:span 2;background:var(--leaf);color:#fff;border:0}
+.big{justify-content:flex-end}.big p{color:#D6E6D2}.big .art{background:rgba(255,255,255,.1);width:min(62%,300px);margin:auto}.big h3{font-size:32px}
+.lunch{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;background:var(--concrete);color:#fff;border-radius:34px;padding:clamp(28px,5vw,60px)}
+.lunch p{color:#C9D0CB}
+.lunch ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.lunch li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.lunch li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--sage);color:var(--ink);font-weight:800}
+.find{display:grid;grid-template-columns:1fr 1.1fr;gap:20px}
+.card{padding:32px;border-radius:28px;background:#fff;border:1px solid var(--line)}
+.card ul{padding-left:20px;margin:12px 0 20px;color:var(--soft)}.card li{margin:6px 0}
+iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:28px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+blockquote{margin:0;padding:24px;border-radius:24px;background:#fff;border:1px solid var(--line)}
+blockquote p{margin:0 0 12px;font-weight:600}blockquote footer{color:var(--soft);font-size:14px}
+.end{background:var(--sage);border-radius:34px;padding:clamp(30px,6vw,70px);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.end h2{margin:0;max-width:15ch}
+footer{color:var(--soft);font-size:14px;padding:0 0 100px}
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;gap:8px}.dock .btn{flex:1}.dock .btn-line{background:var(--cream)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+@media (max-width:900px){.plates{grid-template-columns:1fr 1fr}.big{grid-column:span 2;grid-row:auto}.lunch,.find{grid-template-columns:1fr}.quotes{grid-template-columns:1fr}.dock{display:flex}.hide-m{display:none}.oasis{height:150vh}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.leaves path{animation:none}}
+</style>
+</head>
+<body>
+<div class="oasis" id="oasis">
+  <div class="stage">
+    <div class="grid"></div><div class="green"></div>
+    <svg class="leaves" id="leaves" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+    <div class="top"><a class="logo" href="#">The Hub<span>.</span></a><a class="btn btn-glass hide-m" href="https://wa.me/905331361856">Masa ayırt</a></div>
+    <div class="copy">
+      <small>Maslak · Atatürk Oto Sanayi Sitesi</small>
+      <h1><span class="a" id="ha">Sanayinin içinde</span><span class="b">bir vaha.</span></h1>
+      <p>Somon tabağı, banana bread ve el yapımı limonata. Maslak'ta öğle arasında kaçılacak yer.</p>
+      <div class="row"><a class="btn btn-main" href="https://wa.me/905331361856">WhatsApp'tan yazın</a><a class="btn btn-glass" href="#bul">Nasıl bulunur</a></div>
+    </div>
+  </div>
+</div>
+
+<main>
+<section><div class="wrap">
+  <h2 class="reveal">Yorumlarda adı geçen tabaklar</h2>
+  <p class="sub reveal">Güncel menü ve fiyatlar için bize yazın. Liste Google yorumlarından derlendi.</p>
+  <div class="plates">
+    <article class="plate big reveal"><div class="art"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="56" rx="40" ry="30" fill="#F4F1E8" opacity=".9"/><path d="M26 54c10-14 38-14 48 0-10 10-38 10-48 0Z" fill="#F08A5D"/><path d="M34 52c6-4 12-4 18 0M48 52c6-4 12-4 18 0" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/><circle cx="30" cy="66" r="6" fill="#9DBF8F"/><circle cx="70" cy="66" r="5" fill="#6E9A4B"/><circle cx="62" cy="40" r="4" fill="#E5D36B"/></svg></div><h3>Somon tabağı</h3><p>Yorumlarda en çok övülen tabak. Yanında mezeler; enginar ayrıca anılıyor.</p></article>
+    <article class="plate reveal"><div class="art"><svg viewBox="0 0 100 100"><rect x="22" y="34" width="56" height="34" rx="8" fill="#B07A45"/><path d="M28 40h44" stroke="#8a5a2c" stroke-width="3"/><circle cx="40" cy="30" r="5" fill="#F2D35B"/><circle cx="58" cy="30" r="5" fill="#F2D35B"/></svg></div><h3>Banana bread</h3><p>Kahvenin yanına.</p></article>
+    <article class="plate reveal"><div class="art"><svg viewBox="0 0 100 100"><path d="M34 26h32l-4 52H38Z" fill="#fff" stroke="#A3134A" stroke-width="2"/><path d="M36 40h28l-3 36H39Z" fill="#C2185B" opacity=".8"/><circle cx="58" cy="28" r="8" fill="#E5D36B"/></svg></div><h3>Hibiskuslu limonata</h3><p>El yapımı.</p></article>
+    <article class="plate reveal"><div class="art"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="56" rx="36" ry="24" fill="#fff"/><circle cx="40" cy="54" r="8" fill="#8a4b2c"/><circle cx="56" cy="50" r="8" fill="#8a4b2c"/><circle cx="62" cy="62" r="6" fill="#9DBF8F"/></svg></div><h3>Köfte tabağı</h3><p>Taze ve sıcak servis.</p></article>
+    <article class="plate reveal"><div class="art"><svg viewBox="0 0 100 100"><path d="M24 62h52l-6 10H30Z" fill="#C9934F"/><path d="M28 62c4-16 40-16 44 0" fill="#E7B66A"/><path d="M36 54l28 0M40 48h20" stroke="#B07A45" stroke-width="3"/></svg></div><h3>Elmalı turta</h3><p>Tatlı arayanlara.</p></article>
+  </div>
+</div></section>
+
+<section><div class="wrap lunch reveal">
+  <div><h2>Öğle arası kısa, sıra beklemeyin.</h2><p>Plazadan çıkmadan siparişinizi yazın, geldiğinizde masanız hazır olsun.</p><a class="btn btn-main" href="https://wa.me/905331361856?text=Merhaba%2C%20%C3%B6%C4%9Fle%20aras%C4%B1%20i%C3%A7in%20sipari%C5%9F%20vermek%20istiyorum.">Öğle siparişi gönder</a></div>
+  <ol><li>WhatsApp'tan ne yiyeceğinizi ve kaç kişi olduğunuzu yazın.</li><li>Geliş saatinizi belirtin.</li><li>Gelin, oturun. Park yeri sorun değil.</li></ol>
+</div></section>
+
+<section id="bul"><div class="wrap find">
+  <div class="card reveal">
+    <h2>Nasıl bulunur</h2>
+    <p>Atatürk Oto Sanayi Sitesi, Ahi Evran Cd. Rentaş Blokları B1 No:27/F, 34398 Sarıyer/İstanbul</p>
+    <ul><li>Sanayi sitesinin içinde, Rentaş Blokları B1.</li><li>Yorumlara göre park etmek kolay.</li><li>Kaybolursanız arayın, yönlendirelim: <a href="tel:+905331361856">0533 136 18 56</a></li></ul>
+    <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=41.1131345,29.0178297" target="_blank" rel="noopener">Yol tarifi al</a>
+  </div>
+  <iframe class="reveal" title="The Hub Maslak harita" loading="lazy" src="https://www.google.com/maps?q=41.1131345,29.0178297&z=17&output=embed"></iframe>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="reveal">4,9 puan, 125 yorum</h2>
+  <div class="quotes">
+    <blockquote class="reveal"><p>“Sanayinin içinde vaha gibi çok şık bir mekân açmışlar.”</p><footer>Erol M. · Google</footer></blockquote>
+    <blockquote class="reveal"><p>“Somon tabağı efsaneydi. Fikrican Şef'in el lezzeti insan üstü.”</p><footer>M. T. · Google</footer></blockquote>
+    <blockquote class="reveal"><p>“El yapımı hibiskuslu limonata ikram ettiler, çok lezzetliydi.”</p><footer>Esra D. · Google</footer></blockquote>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="end reveal"><h2>Bugün öğlen burada mısınız?</h2><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-main" href="https://wa.me/905331361856">WhatsApp</a><a class="btn btn-line" href="tel:+905331361856">0533 136 18 56</a></div></div>
+<footer>The Hub Maslak · Ahi Evran Cd., Sarıyer · Bu sayfa bir tasarım örneğidir.</footer></div>
+</main>
+<div class="dock"><a class="btn btn-line" href="tel:+905331361856">Ara</a><a class="btn btn-main" href="https://wa.me/905331361856">WhatsApp</a></div>
+<script>
+const lv=document.getElementById('leaves');let s='';
+const spots=[[80,760],[250,800],[1120,780],[960,820],[40,420],[1180,380],[600,860],[420,820],[760,800]];
+spots.forEach(([x,y],i)=>{const r=-60+i*17;let g=`<g style="--ox:${x}px;--oy:${y}px">`;for(let k=0;k<5;k++){const a=(r+k*28-56)*Math.PI/180,len=160+((i*37+k*23)%120);const ex=x+Math.sin(a)*len,ey=y-Math.cos(a)*len;const mx=x+Math.sin(a-.3)*len*.6,my=y-Math.cos(a-.3)*len*.6;g+=`<path d="M${x} ${y} Q ${mx} ${my} ${ex} ${ey} Q ${x+Math.sin(a+.3)*len*.6} ${y-Math.cos(a+.3)*len*.6} ${x} ${y}Z" fill="${k%2?'#5f9a5c':'#9DBF8F'}" opacity=".85" style="transform-origin:${x}px ${y}px;animation-delay:${-k}s"/>`}s+=g+'</g>'});
+lv.innerHTML=s;
+const oasis=document.getElementById('oasis'),ha=document.getElementById('ha');
+function upd(){const r=oasis.getBoundingClientRect(),tot=oasis.offsetHeight-innerHeight;const p=Math.min(1,Math.max(0,-r.top/tot));oasis.style.setProperty('--p',(.15+p*.85).toFixed(3))}
+addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
