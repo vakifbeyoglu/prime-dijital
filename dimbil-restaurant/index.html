@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dimbil Restaurant | Sultanahmet, Kadırga</title>
+<meta name="description" content="Kadırga Limanı Caddesi'nde ev usulü Türk mutfağı. Türkçe, İngilizce ve Rusça menü, WhatsApp'tan rezervasyon.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF3E4;--surface:#FFFaf1;--ink:#2A1A12;--soft:#6B5444;--red:#8E1B2A;--red-ink:#fff;--saffron:#D99A1E;--line:#E7D7BE;--r:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif}
+a{color:inherit}img,svg{display:block}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;height:64px}
+.logo{font:700 22px/1 Fraunces,serif;letter-spacing:.2px;text-decoration:none}
+.logo b{color:var(--red)}
+.langs{margin-left:auto;display:flex;gap:4px;padding:4px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.langs button{all:unset;cursor:pointer;padding:8px 13px;border-radius:999px;font-weight:700;font-size:14px;color:var(--soft);min-width:24px;text-align:center}
+.langs button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.langs button:focus-visible,.btn:focus-visible,.dish:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-main{background:var(--red);color:var(--red-ink);box-shadow:0 10px 24px -10px rgba(142,27,42,.6)}
+.btn-main:hover{background:#7a1623}
+.btn-glass{background:rgba(255,255,255,.55);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.btn svg{width:20px;height:20px}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.kicker{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:14px;color:var(--red);background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px}
+.kicker i{width:8px;height:8px;border-radius:50%;background:#2e9d5b;box-shadow:0 0 0 4px rgba(46,157,91,.18)}
+h1{font:700 clamp(40px,6vw,74px)/1.02 Fraunces,serif;margin:18px 0 18px;letter-spacing:-.5px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--red)}
+.lead{font-size:19px;color:var(--soft);max-width:34ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;gap:22px;margin-top:30px;flex-wrap:wrap;color:var(--soft);font-size:15px}
+.proof b{display:block;font:700 28px/1.1 Fraunces,serif;color:var(--ink)}
+/* tea scene */
+.scene{position:relative;aspect-ratio:1/1;max-width:460px;margin-left:auto;width:100%}
+.disc{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff7e6,#F2DFC0 60%,#E9CFA4)}
+.pattern{position:absolute;inset:0;animation:spin 90s linear infinite}
+.glass{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:38%}
+.steam path{stroke:#B49A7E;stroke-width:3;fill:none;stroke-linecap:round;opacity:0;animation:steam 4.5s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:1.4s}.steam path:nth-child(3){animation-delay:2.8s}
+.baklava{position:absolute;right:6%;bottom:12%;width:30%;animation:bob 6s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(14px)}35%{opacity:.8}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-3deg)}}
+/* sections */
+section{padding:72px 0}
+h2{font:700 clamp(30px,4vw,46px)/1.08 Fraunces,serif;margin:0 0 14px;letter-spacing:-.3px;text-wrap:balance}
+.sub{color:var(--soft);max-width:56ch;margin:0 0 34px}
+.menu{background:var(--ink);color:var(--bg);border-radius:36px;padding:56px clamp(20px,4vw,56px)}
+.menu .sub{color:#CDBBA6}
+.dishes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.dish{position:relative;padding:22px;border-radius:var(--r);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);transition:transform .25s,background .25s}
+.dish:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.dish h3{font:600 21px/1.25 Fraunces,serif;margin:10px 0 6px}
+.dish p{margin:0;color:#CDBBA6;font-size:15px}
+.dish .ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--saffron);color:var(--ink)}
+.dish .ico svg{width:24px;height:24px}
+.note{margin-top:22px;font-size:14px;color:#CDBBA6}
+.swap{transition:opacity .25s}.swapping .swap{opacity:0}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+blockquote{margin:0;padding:26px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line)}
+blockquote p{margin:0 0 14px}
+blockquote footer{font-size:14px;color:var(--soft)}
+.stars{color:var(--saffron);letter-spacing:2px;margin-bottom:8px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.card{padding:30px;border-radius:28px;background:var(--surface);border:1px solid var(--line)}
+.card dl{margin:0;display:grid;gap:14px}.card dt{font-size:13px;font-weight:700;color:var(--soft);text-transform:uppercase;letter-spacing:.06em}.card dd{margin:2px 0 0;font-size:18px}
+iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:28px}
+.final{text-align:center;padding:84px 0 110px}
+.final .cta{justify-content:center}
+footer.f{border-top:1px solid var(--line);padding:26px 0 100px;color:var(--soft);font-size:14px}
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;gap:8px}
+.dock .btn{flex:1;justify-content:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:860px){.hero-grid,.visit{grid-template-columns:1fr}.scene{max-width:320px;margin:0 auto}.quotes{grid-template-columns:1fr}.dock{display:flex}.hide-m{display:none}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.pattern{animation-duration:240s}.baklava{animation:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="#">Dimbil <b>·</b></a>
+  <div class="langs" role="group" aria-label="Dil / Language / Язык">
+    <button data-l="tr" aria-pressed="true">TR</button><button data-l="en" aria-pressed="false">EN</button><button data-l="ru" aria-pressed="false">RU</button>
+  </div>
+  <a class="btn btn-main hide-m" href="https://wa.me/905355920416" data-t="book">Masa ayırt</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="kicker"><i></i><span data-t="kicker">Sultanahmet · Kadırga Limanı Caddesi</span></span>
+    <h1 data-t="h1" data-html>Sultanahmet'te <em>ev sofrası</em>, üç dilde.</h1>
+    <p class="lead" data-t="lead">Büyük porsiyonlar, sıcak servis ve yorumlarda sık anılan çay ikramı. Menüyü kendi dilinizde okuyun, masanızı WhatsApp'tan ayırtın.</p>
+    <div class="cta">
+      <a class="btn btn-main" href="https://wa.me/905355920416"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.1Z"/></svg><span data-t="wa">WhatsApp'tan yazın</span></a>
+      <a class="btn btn-glass" href="tel:+905355920416"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>0535 592 04 16</a>
+    </div>
+    <div class="proof">
+      <div><b>5,0</b><span data-t="p1">Google puanı</span></div>
+      <div><b>3.388</b><span data-t="p2">Google yorumu</span></div>
+      <div><b>TR · EN · RU</b><span data-t="p3">konuşan ekip</span></div>
+    </div>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <div class="disc"></div>
+    <svg class="pattern" viewBox="0 0 200 200"><g fill="none" stroke="#C9A57A" stroke-width="1.2" opacity=".55">
+      <circle cx="100" cy="100" r="92" stroke-dasharray="2 6"/><circle cx="100" cy="100" r="80"/>
+      <g id="p"><path d="M100 22c8 10 8 20 0 30-8-10-8-20 0-30Z"/></g>
+      <use href="#p" transform="rotate(45 100 100)"/><use href="#p" transform="rotate(90 100 100)"/><use href="#p" transform="rotate(135 100 100)"/><use href="#p" transform="rotate(180 100 100)"/><use href="#p" transform="rotate(225 100 100)"/><use href="#p" transform="rotate(270 100 100)"/><use href="#p" transform="rotate(315 100 100)"/>
+    </g></svg>
+    <svg class="glass" viewBox="0 0 100 150">
+      <g class="steam"><path d="M38 30c-6-8 6-12 0-22"/><path d="M52 30c-6-8 6-12 0-22"/><path d="M66 30c-6-8 6-12 0-22"/></g>
+      <ellipse cx="50" cy="140" rx="40" ry="7" fill="#C9A57A"/>
+      <path d="M26 40h48c-2 14-10 22-10 40s8 30 10 50H26c2-20 10-32 10-50S28 54 26 40Z" fill="#8E1B2A" opacity=".9"/>
+      <path d="M26 40h48c-2 14-10 22-10 40s8 30 10 50H26c2-20 10-32 10-50S28 54 26 40Z" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+      <path d="M32 46c2 10 6 16 6 30" stroke="#fff" stroke-opacity=".45" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg class="baklava" viewBox="0 0 100 70"><path d="M8 48 50 14l42 34-42 14Z" fill="#E0A63A"/><path d="M8 48l42 14 42-14v8L50 70 8 56Z" fill="#B97A1C"/><path d="M30 32l20-12 20 12" stroke="#7FAF3F" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap"><div class="menu reveal">
+  <h2 data-t="mh">Misafirlerimizin en çok andığı tabaklar</h2>
+  <p class="sub" data-t="ms">Bu liste Google yorumlarında en sık geçen yemeklerden derlendi. Güncel menü ve fiyatlar için bize yazın.</p>
+  <div class="dishes swap" id="dishes"></div>
+  <p class="note" data-t="mn">Fotoğraflar ve tam menü işletmeyle birlikte eklenecek.</p>
+</div></div></section>
+
+<section><div class="wrap">
+  <h2 class="reveal" data-t="rh">Yorumlarda ne yazıyor</h2>
+  <p class="sub reveal" data-t="rs">Yorumların çoğu Rusça. Birkaçını Türkçeye çevirdik.</p>
+  <div class="quotes">
+    <blockquote class="reveal"><div class="stars">★★★★★</div><p data-t="q1">“Büyük porsiyonlar, güler yüzlü personel. Peynirli pide ve tavuk şiş sipariş ettik, yarısını ancak bitirebildim.”</p><footer>Karina V. · Google</footer></blockquote>
+    <blockquote class="reveal"><div class="stars">★★★★★</div><p data-t="q2">“Yöneticisi Türkçe, İngilizce ve Rusça konuşuyor, herkesle ilgileniyor. Bize ikram olarak çay da getirdiler.”</p><footer>Natali M. · Google</footer></blockquote>
+    <blockquote class="reveal"><div class="stars">★★★★★</div><p data-t="q3">“On kez kadar geldik, her seferinde bizi akraba gibi karşıladılar.”</p><footer>Marina V. · Google</footer></blockquote>
+  </div>
+</div></section>
+
+<section id="visit"><div class="wrap visit">
+  <div class="card reveal">
+    <h2 data-t="vh">Nasıl gelinir</h2>
+    <dl>
+      <div><dt data-t="adr">Adres</dt><dd>Küçük Ayasofya, Kadırga Limanı Cd. No:112, 34122 Fatih/İstanbul</dd></div>
+      <div><dt data-t="tel">Telefon ve WhatsApp</dt><dd><a href="tel:+905355920416">0535 592 04 16</a></dd></div>
+      <div><dt data-t="lng">Konuşulan diller</dt><dd>Türkçe · English · Русский</dd></div>
+    </dl>
+    <p style="margin-top:22px"><a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&destination=41.0043227,28.9714664" target="_blank" rel="noopener" data-t="dir">Yol tarifi al</a></p>
+  </div>
+  <iframe class="reveal" title="Dimbil Restaurant harita" loading="lazy" src="https://www.google.com/maps?q=41.0043227,28.9714664&z=17&output=embed"></iframe>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2 class="reveal" data-t="fh">Bu akşam bir masa ayıralım mı?</h2>
+  <p class="sub reveal" style="margin-inline:auto" data-t="fs">Kaç kişi olduğunuzu ve saatinizi yazmanız yeterli.</p>
+  <div class="cta reveal"><a class="btn btn-main" href="https://wa.me/905355920416" data-t="book">Masa ayırt</a><a class="btn btn-glass" href="tel:+905355920416">0535 592 04 16</a></div>
+</div></section>
+</main>
+
+<footer class="f"><div class="wrap">Dimbil Restaurant · Kadırga Limanı Cd. No:112, Fatih · <span data-t="demo">Bu sayfa bir tasarım örneğidir.</span></div></footer>
+<div class="dock"><a class="btn btn-glass" href="tel:+905355920416" data-t="call">Ara</a><a class="btn btn-main" href="https://wa.me/905355920416">WhatsApp</a></div>
+
+<script>
+const I={
+ meat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 20 4M7 17l-2-2M17 7l2 2"/><circle cx="12" cy="12" r="2.5"/><circle cx="8.5" cy="15.5" r="2"/><circle cx="15.5" cy="8.5" r="2"/></svg>',
+ pide:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12c4-6 14-6 18 0-4 6-14 6-18 0Z"/><path d="M8 12h8"/></svg>',
+ sun:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>',
+ tea:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 8h10l-1.5 12h-7Z"/><path d="M9 4c0 1 1 1 1 2M13 4c0 1 1 1 1 2"/></svg>',
+ fire:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-7 1 2 2 3 3 3 0-3-1-5 0-7Z"/></svg>',
+ bowl:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M9 7c0-2 2-2 2-4M14 7c0-2 2-2 2-4"/></svg>'};
+const T={
+tr:{book:"Masa ayırt",kicker:"Sultanahmet · Kadırga Limanı Caddesi",h1:"Sultanahmet'te <em>ev sofrası</em>, üç dilde.",lead:"Büyük porsiyonlar, sıcak servis ve yorumlarda sık anılan çay ikramı. Menüyü kendi dilinizde okuyun, masanızı WhatsApp'tan ayırtın.",wa:"WhatsApp'tan yazın",p1:"Google puanı",p2:"Google yorumu",p3:"konuşan ekip",mh:"Misafirlerimizin en çok andığı tabaklar",ms:"Bu liste Google yorumlarında en sık geçen yemeklerden derlendi. Güncel menü ve fiyatlar için bize yazın.",mn:"Fotoğraflar ve tam menü işletmeyle birlikte eklenecek.",rh:"Yorumlarda ne yazıyor",rs:"Yorumların çoğu Rusça. Birkaçını Türkçeye çevirdik.",q1:"“Büyük porsiyonlar, güler yüzlü personel. Peynirli pide ve tavuk şiş sipariş ettik, yarısını ancak bitirebildim.”",q2:"“Yöneticisi Türkçe, İngilizce ve Rusça konuşuyor, herkesle ilgileniyor. Bize ikram olarak çay da getirdiler.”",q3:"“On kez kadar geldik, her seferinde bizi akraba gibi karşıladılar.”",vh:"Nasıl gelinir",adr:"Adres",tel:"Telefon ve WhatsApp",lng:"Konuşulan diller",dir:"Yol tarifi al",fh:"Bu akşam bir masa ayıralım mı?",fs:"Kaç kişi olduğunuzu ve saatinizi yazmanız yeterli.",demo:"Bu sayfa bir tasarım örneğidir.",call:"Ara",
+ d:[["meat","Karışık et tabağı","İki kişiyi rahat doyuran büyük ızgara tabağı."],["pide","Peynirli pide","Fırından sıcak, paylaşmalık."],["fire","Tavuk şiş","Sebze, patates ve pilavla gelir."],["sun","Serpme kahvaltı","Güne çok tabaklı bir sofrayla başlayın."],["bowl","Acılı kebap","Baharatı sevenler için. Acı seviyesini garsona söyleyin."],["tea","Çay ve baklava","Yorumlarda sık anılan tatlı kapanış."]]},
+en:{book:"Book a table",kicker:"Sultanahmet · Kadırga Limanı Street",h1:"<em>Home-style</em> Turkish food in Sultanahmet.",lead:"Generous portions, hot service and the tea guests keep mentioning in reviews. Read the menu in your language and book your table on WhatsApp.",wa:"Message on WhatsApp",p1:"Google rating",p2:"Google reviews",p3:"spoken here",mh:"The dishes our guests mention most",ms:"Collected from the dishes guests name most often in Google reviews. Message us for today's menu and prices.",mn:"Photos and the full menu will be added with the restaurant.",rh:"What guests write",rs:"Most reviews are in Russian. Here are a few, translated.",q1:"“Huge portions, friendly staff. We ordered cheese pide and chicken shish and I could only finish half.”",q2:"“The manager speaks Turkish, English and Russian and takes care of everyone. They even brought us tea on the house.”",q3:"“We came about ten times and every time they welcomed us like family.”",vh:"How to find us",adr:"Address",tel:"Phone and WhatsApp",lng:"Languages",dir:"Get directions",fh:"Shall we keep a table for you tonight?",fs:"Just tell us how many people and what time.",demo:"This page is a design preview.",call:"Call",
+ d:[["meat","Mixed grill platter","A big grill plate that easily feeds two."],["pide","Cheese pide","Hot from the oven, made for sharing."],["fire","Chicken shish","Served with vegetables, fries and rice."],["sun","Turkish breakfast spread","Start the day with a table full of small plates."],["bowl","Spicy kebab","For spice lovers. Tell your waiter how hot you like it."],["tea","Tea and baklava","The sweet finish guests often mention."]]},
+ru:{book:"Забронировать",kicker:"Султанахмет · улица Кадырга Лиманы",h1:"<em>Домашняя</em> турецкая кухня в Султанахмете.",lead:"Большие порции, горячая подача и тот самый чай, о котором пишут в отзывах. Читайте меню на своём языке и бронируйте стол в WhatsApp.",wa:"Написать в WhatsApp",p1:"оценка Google",p2:"отзывов в Google",p3:"говорим на языках",mh:"Блюда, о которых гости пишут чаще всего",ms:"Список составлен по блюдам, которые чаще всего упоминают в отзывах Google. Актуальное меню и цены уточняйте у нас.",mn:"Фото и полное меню будут добавлены вместе с рестораном.",rh:"Что пишут гости",rs:"Цитаты из отзывов в Google.",q1:"«Большие порции, вежливый персонал. Сырное пиде и куриный шашлык: съела ровно половину.»",q2:"«Администратор говорит на турецком, английском и русском, найдёт подход к каждому. Угостили бесплатно чаем.»",q3:"«Были здесь раз десять, и каждый раз нас встречали как родных.»",vh:"Как нас найти",adr:"Адрес",tel:"Телефон и WhatsApp",lng:"Языки",dir:"Проложить маршрут",fh:"Оставить для вас столик на вечер?",fs:"Напишите, сколько вас и во сколько придёте.",demo:"Эта страница является демонстрацией дизайна.",call:"Позвонить",
+ d:[["meat","Большое мясное ассорти","Большая тарелка гриля, легко хватит на двоих."],["pide","Сырное пиде","Горячее из печи, на компанию."],["fire","Куриный шашлык","С овощами, картофелем фри и рисом."],["sun","Турецкий завтрак","Стол из множества маленьких тарелок."],["bowl","Острый кебаб","Для любителей специй. Скажите официанту, насколько остро."],["tea","Чай и пахлава","Сладкое завершение, о котором часто пишут гости."]]}};
+function set(l){const t=T[l];document.documentElement.lang=l;document.body.classList.add('swapping');
+ setTimeout(()=>{document.querySelectorAll('[data-t]').forEach(e=>{const k=e.dataset.t;if(t[k]==null)return;if(e.hasAttribute('data-html'))e.innerHTML=t[k];else e.textContent=t[k]});
+ document.getElementById('dishes').innerHTML=t.d.map(([i,n,p])=>`<article class="dish" tabindex="0"><span class="ico" aria-hidden="true">${I[i]}</span><h3>${n}</h3><p>${p}</p></article>`).join('');
+ document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));document.body.classList.remove('swapping');try{localStorage.setItem('dimbil-l',l)}catch(e){}},200)}
+document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>set(b.dataset.l));
+let start='tr';try{start=localStorage.getItem('dimbil-l')||((navigator.language||'').startsWith('ru')?'ru':(navigator.language||'').startsWith('tr')?'tr':'en')}catch(e){}
+set(start);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
