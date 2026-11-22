@@ -1,174 +1,37 @@
 <!doctype html>
 <html lang="tr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Naki Restaurant | Binbirdirek, Sultanahmet</title>
-<meta name="description" content="Piyer Loti Caddesi'nde Türk mutfağı. Acı seviyesi ve servis ücreti önceden yazılı, sürprizsiz menü.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#F3EEE5;--paper:#FBF8F2;--ink:#0E2B2C;--soft:#4F6566;--teal:#0F3D3E;--copper:#B85A22;--copper-ink:#fff;--line:#DCD3C4;--chili:#C2341B}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif}
-a{color:inherit}.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
-header{display:flex;align-items:center;gap:18px;height:70px}
-.logo{font:400 28px/1 "DM Serif Display",serif;text-decoration:none}
-nav{margin-left:auto;display:flex;gap:22px;font-weight:500}nav a{text-decoration:none;opacity:.8}nav a:hover{opacity:1}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:16px;font-weight:700;text-decoration:none;transition:transform .2s,background .2s;border:0;cursor:pointer;font-size:16px}
-.btn:active{transform:scale(.97)}.btn:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
-.btn-main{background:var(--copper);color:var(--copper-ink)}.btn-main:hover{background:#9f4c1b}
-.btn-glass{background:rgba(255,255,255,.5);border:1px solid var(--line);backdrop-filter:blur(8px)}
-/* hero: split editorial */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:min(84vh,760px);border-radius:32px;overflow:hidden;margin-top:8px}
-.hero-l{background:var(--teal);color:#F3EEE5;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;justify-content:flex-end}
-.hero-l h1{font:400 clamp(44px,6.4vw,86px)/.98 "DM Serif Display",serif;margin:0 0 20px;letter-spacing:-.5px}
-.hero-l p{color:#BFD0CC;font-size:19px;max-width:36ch;margin:0 0 28px}
-.hero-l .row{display:flex;gap:12px;flex-wrap:wrap}
-.hero-l .btn-glass{color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25)}
-.hero-r{position:relative;background:#E9DFCF;overflow:hidden}
-.tile{position:absolute;inset:0;background-image:radial-gradient(circle at 25% 25%,transparent 18px,rgba(15,61,62,.09) 19px,rgba(15,61,62,.09) 21px,transparent 22px),radial-gradient(circle at 75% 75%,transparent 18px,rgba(184,90,34,.12) 19px,rgba(184,90,34,.12) 21px,transparent 22px);background-size:80px 80px;animation:drift 40s linear infinite}
-@keyframes drift{to{background-position:80px 160px}}
-.plate{position:absolute;left:50%;top:50%;width:min(78%,420px);transform:translate(-50%,-50%)}
-.plate .ring{animation:turn 60s linear infinite;transform-origin:50% 50%}
-@keyframes turn{to{transform:rotate(360deg)}}
-.chip{position:absolute;padding:10px 16px;border-radius:999px;background:var(--paper);box-shadow:0 12px 26px -12px rgba(14,43,44,.35);font-weight:700;font-size:15px;animation:float 7s ease-in-out infinite}
-.chip.a{left:8%;top:14%}.chip.b{right:8%;top:62%;animation-delay:2s}.chip.c{left:12%;bottom:10%;animation-delay:4s}
-@keyframes float{50%{transform:translateY(-10px)}}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:24px;overflow:hidden;margin:28px 0 0}
-.facts div{background:var(--paper);padding:22px 24px}.facts b{display:block;font:400 34px/1 "DM Serif Display",serif}.facts span{color:var(--soft);font-size:15px}
-section{padding:80px 0}
-h2{font:400 clamp(34px,4.4vw,56px)/1.02 "DM Serif Display",serif;margin:0 0 14px}
-.sub{color:var(--soft);max-width:58ch;margin:0 0 30px}
-/* spice meter signature */
-.meter{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:start}
-.panel{position:sticky;top:20px;padding:26px;border-radius:24px;background:var(--teal);color:#F3EEE5}
-.panel h3{margin:0 0 6px;font:400 26px/1.1 "DM Serif Display",serif}
-.panel p{margin:0 0 18px;color:#BFD0CC;font-size:15px}
-.peppers{display:flex;gap:6px;margin:6px 0 10px}
-.peppers svg{width:34px;height:34px;transition:transform .25s,opacity .25s;opacity:.25}
-.peppers svg.on{opacity:1;transform:translateY(-3px) rotate(-8deg)}
-input[type=range]{width:100%;accent-color:var(--copper);height:32px}
-.lvl{font-weight:700;font-size:18px}
-.list{display:grid;gap:12px}
-.item{display:grid;grid-template-columns:1fr auto;gap:6px 18px;padding:20px 22px;border-radius:20px;background:var(--paper);border:1px solid var(--line);transition:opacity .35s,transform .35s,filter .35s}
-.item h4{margin:0;font:400 23px/1.2 "DM Serif Display",serif}
-.item p{margin:0;color:var(--soft);font-size:15px;grid-column:1/2}
-.heat{align-self:start;display:flex;gap:2px;color:var(--chili)}.heat svg{width:18px;height:18px}
-.item.too{opacity:.38;filter:grayscale(.7)}
-.item .warn{display:none;grid-column:1/-1;font-size:14px;font-weight:700;color:var(--chili)}
-.item.too .warn{display:block}
-.bill{margin-top:30px;padding:26px;border-radius:24px;border:2px dashed var(--copper);background:var(--paper)}
-.bill h3{margin:0 0 8px;font:400 26px/1.1 "DM Serif Display",serif}
-.bill ul{margin:0;padding-left:20px;color:var(--soft)}.bill li{margin:6px 0}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-figure{margin:0;padding:26px;border-radius:22px;background:var(--paper);border:1px solid var(--line)}
-figure blockquote{margin:0 0 14px;font:400 22px/1.3 "DM Serif Display",serif}
-figcaption{color:var(--soft);font-size:14px}
-.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:20px}
-.card{padding:30px;border-radius:24px;background:var(--paper);border:1px solid var(--line)}
-.card p{margin:0 0 12px}
-iframe{width:100%;min-height:340px;height:100%;border:0;border-radius:24px}
-.end{background:var(--copper);color:#fff;border-radius:32px;padding:clamp(32px,6vw,72px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;margin-bottom:40px}
-.end h2{margin:0;max-width:16ch}.end .btn{background:#fff;color:var(--ink)}
-.end .btn-glass{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}
-footer{padding:0 0 100px;color:var(--soft);font-size:14px}
-.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;gap:8px}.dock .btn{flex:1}.dock .btn-glass{background:var(--paper);border-color:var(--line);color:var(--ink)}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
-@media (max-width:880px){nav{display:none}.hero,.meter,.visit{grid-template-columns:1fr}.hero-r{min-height:340px;order:-1}.panel{position:static}.quotes,.facts{grid-template-columns:1fr}.dock{display:flex}}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.tile{animation-duration:160s}.chip{animation:none}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header><a class="logo" href="#">Naki</a><nav><a href="#menu">Menü</a><a href="#hesap">Hesap</a><a href="#yol">Yol tarifi</a></nav><a class="btn btn-main" href="https://wa.me/905528596144">Masa ayırt</a></header>
-
-<div class="hero">
-  <div class="hero-l">
-    <h1>Hesapta sürpriz yok, tabakta da.</h1>
-    <p>Piyer Loti Caddesi'nde Türk mutfağı. Acı seviyesini, porsiyonu ve servis ücretini siparişten önce görürsünüz.</p>
-    <div class="row"><a class="btn btn-main" href="#menu">Menüye bak</a><a class="btn btn-glass" href="tel:+905528596144">0552 859 61 44</a></div>
-  </div>
-  <div class="hero-r" aria-hidden="true">
-    <div class="tile"></div>
-    <svg class="plate" viewBox="0 0 200 200">
-      <circle cx="100" cy="104" r="86" fill="#0E2B2C" opacity=".12"/>
-      <circle cx="100" cy="100" r="86" fill="#FBF8F2"/>
-      <g class="ring"><circle cx="100" cy="100" r="76" fill="none" stroke="#0F3D3E" stroke-width="2" stroke-dasharray="6 7"/></g>
-      <circle cx="100" cy="100" r="64" fill="#F0E6D6"/>
-      <path d="M58 112c14-26 70-26 84 0-14 14-70 14-84 0Z" fill="#B85A22"/>
-      <path d="M66 110c12-16 56-16 68 0" stroke="#7a3a14" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="4 6"/>
-      <circle cx="80" cy="80" r="9" fill="#6E9A4B"/><circle cx="96" cy="74" r="7" fill="#C2341B"/><circle cx="118" cy="80" r="8" fill="#6E9A4B"/>
-      <path d="M122 70c8-2 14 4 12 12" stroke="#C2341B" stroke-width="6" stroke-linecap="round" fill="none"/>
-    </svg>
-    <span class="chip a">Acı seviyesi yazılı</span>
-    <span class="chip b">Servis ücreti önceden</span>
-    <span class="chip c">Büyük porsiyon</span>
-  </div>
-</div>
-<div class="facts reveal">
-  <div><b>4,7</b><span>Google puanı</span></div>
-  <div><b>1.115</b><span>Google yorumu</span></div>
-  <div><b>Binbirdirek</b><span>Sultanahmet'e yürüme mesafesi</span></div>
-</div>
-
-<section id="menu">
-  <h2 class="reveal">Acıya ne kadar dayanırsınız?</h2>
-  <p class="sub reveal">Kaydırıcıyı kendi seviyenize getirin. Size göre fazla acı olan tabaklar sönükleşir ve uyarı çıkar. Liste örnektir, işletmenin gerçek menüsüyle doldurulacak.</p>
-  <div class="meter">
-    <div class="panel reveal">
-      <h3>Acı toleransım</h3>
-      <p>0 hiç acı yok, 3 bol acı.</p>
-      <div class="peppers" id="peppers" aria-hidden="true"></div>
-      <label for="tol" class="lvl" id="lvl">Orta</label>
-      <input id="tol" type="range" min="0" max="3" step="1" value="1" aria-describedby="lvl">
-    </div>
-    <div class="list" id="list"></div>
-  </div>
-  <div class="bill reveal" id="hesap">
-    <h3>Hesapta neler olur</h3>
-    <ul>
-      <li>Servis ücreti uygulanıyorsa oranı burada ve menünün her sayfasında yazar.</li>
-      <li>İkram edilen çay ve tatlı hesaba eklenmez.</li>
-      <li>Ödeme seçenekleri ve fiyatlar işletmeyle birlikte eklenecek.</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <h2 class="reveal">Misafirler ne diyor</h2>
-  <div class="quotes">
-    <figure class="reveal"><blockquote>“Lezzet, hizmet ve mekân açısından çok güzel ve başarılı.”</blockquote><figcaption>Büşra P. · Google</figcaption></figure>
-    <figure class="reveal"><blockquote>“Hızlı servis, büyük porsiyonlar. Ana yemekten sonra salatayı bitiremedik.”</blockquote><figcaption>Evgeniia G. · Google (Rusçadan çeviri)</figcaption></figure>
-    <figure class="reveal"><blockquote>“Kuzu aldım, çok beğendim. İkram meze, baklava ve çay da vardı.”</blockquote><figcaption>Lena B. · Google (Rusçadan çeviri)</figcaption></figure>
-  </div>
-</section>
-
-<section id="yol"><div class="visit">
-  <div class="card reveal">
-    <h2>Yol tarifi</h2>
-    <p>Binbirdirek, Piyer Loti Cd. 12A, 34122 Fatih/İstanbul</p>
-    <p><a href="tel:+905528596144">0552 859 61 44</a> · WhatsApp aynı numara</p>
-    <p><a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&destination=41.0071482,28.9708886" target="_blank" rel="noopener">Haritada aç</a></p>
-  </div>
-  <iframe class="reveal" title="Naki Restaurant harita" loading="lazy" src="https://www.google.com/maps?q=41.0071482,28.9708886&z=17&output=embed"></iframe>
-</div></section>
-
-<div class="end reveal"><h2>Akşam yemeği için yeriniz hazır olsun.</h2><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="https://wa.me/905528596144">WhatsApp'tan masa ayırt</a><a class="btn btn-glass" href="tel:+905528596144">Ara</a></div></div>
-<footer>Naki Restaurant · Piyer Loti Cd. 12A, Fatih · Bu sayfa bir tasarım örneğidir.</footer>
-</div>
-<div class="dock"><a class="btn btn-glass" href="tel:+905528596144">Ara</a><a class="btn btn-main" href="https://wa.me/905528596144">WhatsApp</a></div>
-<script>
-const pep='<svg viewBox="0 0 24 24" fill="#C2341B"><path d="M14 4c1-1 3-1 3 1-1 0-2 1-2 2 4 1 5 6 2 10-3 4-9 5-12 3 5-1 7-5 7-9 0-2 1-4 2-5Z"/><path d="M15 7c0-2 1-3 2-3" stroke="#3d7a2b" stroke-width="2" fill="none"/></svg>';
-const D=[["Mercimek çorbası","Limon ve kızarmış ekmekle.",0],["Kuzu tandır","Uzun süre pişmiş kuzu, pilav eşliğinde.",0],["Tavuk şiş","Közlenmiş biber ve domatesle.",0],["Adana kebap","Zırh kıyması, isteğe göre acılı.",2],["Ali Nazik","Közlenmiş patlıcan yoğurt üstünde kuzu.",1],["Acılı ezme","Domates, biber, nar ekşisi.",3],["Testi kebabı","Toprak kapta pişer, masada kırılır.",1],["Künefe","Sıcak servis, antep fıstıklı.",0]];
-const names=["Hiç acı istemem","Hafif","Orta","Bol acı"];
-const list=document.getElementById('list'),tol=document.getElementById('tol'),lvl=document.getElementById('lvl'),pp=document.getElementById('peppers');
-list.innerHTML=D.map(([n,p,h])=>`<article class="item" data-h="${h}"><h4>${n}</h4><span class="heat" aria-label="Acı seviyesi ${h}/3">${pep.repeat(h)}</span><p>${p}</p><span class="warn">Seviyenizden acı. İsterseniz acısız hazırlanmasını isteyin.</span></article>`).join('');
-pp.innerHTML=pep.repeat(3);
-function upd(){const v=+tol.value;lvl.textContent=names[v];[...pp.children].forEach((s,i)=>s.classList.toggle('on',i<v));list.querySelectorAll('.item').forEach(it=>it.classList.toggle('too',+it.dataset.h>v))}
-tol.addEventListener('input',upd);upd();
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Naki Restaurant | Binbirdirek, Fatih</title>
+    <meta name="description" content="Binbirdirek, Piyer Loti Caddesi'nde Türk restoranı. Acı derecesini ve hesapta neler olabileceğini siparişten önce gösteren açık menü. 0552 859 61 44" />
+    <meta name="theme-color" content="#071A1D" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Naki Restaurant" />
+    <meta property="og:title" content="Naki Restaurant | Binbirdirek, Fatih" />
+    <meta property="og:description" content="Binbirdirek, Piyer Loti Caddesi'nde Türk restoranı. Acı derecesini ve hesapta neler olabileceğini siparişten önce gösteren açık menü. 0552 859 61 44" />
+    <meta property="og:url" content="https://vakifbeyoglu.github.io/prime-dijital/naki-restaurant/" />
+    <meta property="og:image" content="https://vakifbeyoglu.github.io/prime-dijital/naki-restaurant/og.jpg?v=1" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Naki Restaurant | Binbirdirek, Fatih" />
+    <meta name="twitter:description" content="Binbirdirek, Piyer Loti Caddesi'nde Türk restoranı. Acı derecesini ve hesapta neler olabileceğini siparişten önce gösteren açık menü. 0552 859 61 44" />
+    <meta name="twitter:image" content="https://vakifbeyoglu.github.io/prime-dijital/naki-restaurant/og.jpg?v=1" />
+    <link rel="canonical" href="https://vakifbeyoglu.github.io/prime-dijital/naki-restaurant/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Naki Restaurant","servesCuisine":"Türk mutfağı","telephone":"+905528596144","url":"https://vakifbeyoglu.github.io/prime-dijital/naki-restaurant/","image":"https://vakifbeyoglu.github.io/prime-dijital/naki-restaurant/og.jpg","address":{"@type":"PostalAddress","streetAddress":"Binbirdirek, Piyer Loti Cd. 12A","addressLocality":"Fatih","addressRegion":"İstanbul","postalCode":"34122","addressCountry":"TR"},"geo":{"@type":"GeoCoordinates","latitude":41.0071482,"longitude":28.9708886}}</script>
+    <script type="module" crossorigin src="./assets/main-B6AjaNDF.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/Chrome-Bs2LKCaq.js">
+    <link rel="modulepreload" crossorigin href="./assets/Spice-pdWhHZOC.js">
+    <link rel="stylesheet" crossorigin href="./assets/Chrome-CayWccjc.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
