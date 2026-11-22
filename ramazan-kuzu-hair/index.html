@@ -1,188 +1,36 @@
 <!doctype html>
 <html lang="tr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Ramazan Kuzu Hair Studio | Maslak</title>
-<meta name="description" content="Maslak'ta renk, açma, highlights ve keratin bakımda uzman kuaför. WhatsApp'tan randevu.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#121110;--panel:#1C1A18;--ink:#F4EDE4;--soft:#B6AA9C;--gold:#D9B88F;--gold-ink:#1A1410;--rose:#E8CFC4;--line:rgba(244,237,228,.12)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif}
-a{color:inherit}.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
-header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s}
-header.s{background:rgba(18,17,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;height:72px;gap:16px}
-.logo{font:600 22px/1 "Cormorant Garamond",serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
-.logo small{display:block;font:400 11px/1.4 Jost;letter-spacing:.32em;color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:500;letter-spacing:.04em;text-decoration:none;transition:transform .2s,background .2s,color .2s}
-.btn:active{transform:scale(.97)}.btn:focus-visible,.sw:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-.btn-main{background:var(--gold);color:var(--gold-ink)}.btn-main:hover{background:#e6c9a3}
-.btn-glass{border:1px solid rgba(244,237,228,.3);background:rgba(255,255,255,.04);backdrop-filter:blur(10px)}
-.btn-glass:hover{background:rgba(255,255,255,.1)}
-.ml{margin-left:auto}
-/* hero */
-.hero{position:relative;min-height:100vh;display:grid;align-items:end;padding:120px 0 64px;overflow:hidden}
-.strands{position:absolute;inset:0;opacity:.9}
-.strands path{fill:none;stroke-width:1.4;stroke-linecap:round;animation:sway 9s ease-in-out infinite alternate}
-@keyframes sway{to{transform:translateX(-26px) skewX(-2deg)}}
-.hero::after{content:"";position:absolute;inset:auto 0 0;height:55%;background:linear-gradient(to top,var(--bg) 20%,transparent)}
-.hero .wrap{position:relative;z-index:2}
-.eyebrow{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:13px}
-h1{font:500 clamp(48px,8vw,112px)/.95 "Cormorant Garamond",serif;margin:14px 0 22px;letter-spacing:-.5px;max-width:13ch}
-h1 i{color:var(--gold)}
-.lead{color:var(--soft);font-size:19px;max-width:42ch;margin:0 0 30px}
-.row{display:flex;gap:12px;flex-wrap:wrap}
-.meta{display:flex;gap:28px;margin-top:36px;color:var(--soft);font-size:15px;flex-wrap:wrap}.meta b{display:block;color:var(--ink);font:500 30px/1 "Cormorant Garamond",serif}
-section{padding:96px 0}
-h2{font:500 clamp(36px,5vw,64px)/1 "Cormorant Garamond",serif;margin:0 0 16px}
-.sub{color:var(--soft);max-width:56ch;margin:0 0 36px}
-/* color lab */
-.lab{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.lock{position:relative;aspect-ratio:4/5;border-radius:240px 240px 32px 32px;background:var(--panel);overflow:hidden;border:1px solid var(--line)}
-.lock svg{position:absolute;inset:0;width:100%;height:100%}
-.lock path{transition:stroke 1s ease}
-.lock .shine{animation:shine 5s ease-in-out infinite}
-@keyframes shine{0%,100%{opacity:.06}50%{opacity:.22}}
-.tag{position:absolute;left:20px;bottom:20px;padding:10px 16px;border-radius:999px;background:rgba(18,17,16,.7);backdrop-filter:blur(8px);font-size:14px;border:1px solid var(--line)}
-.sws{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin:0 0 26px}
-.sw{all:unset;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:var(--panel);transition:border-color .2s,transform .2s}
-.sw:hover{transform:translateY(-2px)}.sw[aria-pressed=true]{border-color:var(--gold)}
-.sw i{width:28px;height:28px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 2px rgba(255,255,255,.15)}
-.desc{min-height:84px;color:var(--soft)}
-/* services */
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:28px;overflow:hidden}
-.svc div{background:var(--bg);padding:30px}
-.svc h3{font:500 28px/1.1 "Cormorant Garamond",serif;margin:0 0 8px;color:var(--gold)}
-.svc p{margin:0;color:var(--soft);font-size:15px}
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.mem{padding:26px;border-radius:24px;background:var(--panel);border:1px solid var(--line)}
-.mono{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;font:600 24px "Cormorant Garamond",serif;color:var(--gold-ink);background:linear-gradient(135deg,var(--gold),var(--rose));margin-bottom:16px}
-.mem h3{margin:0;font:500 26px/1.1 "Cormorant Garamond",serif}.mem p{margin:6px 0 0;color:var(--soft);font-size:15px}
-.quotes{columns:2;column-gap:16px}
-blockquote{break-inside:avoid;margin:0 0 16px;padding:28px;border-radius:24px;background:var(--panel);border:1px solid var(--line)}
-blockquote p{margin:0 0 14px;font:500 23px/1.35 "Cormorant Garamond",serif}
-blockquote footer{color:var(--gold);font-size:14px;letter-spacing:.06em}
-.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:20px}
-.card{padding:34px;border-radius:28px;background:var(--panel);border:1px solid var(--line)}
-iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:28px;filter:grayscale(.6) contrast(1.05)}
-.close{text-align:center;padding:120px 0 140px}
-.close h2{font-size:clamp(44px,7vw,96px)}
-.close .row{justify-content:center}
-footer.f{border-top:1px solid var(--line);padding:26px 0 100px;color:var(--soft);font-size:14px}
-.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;gap:8px}.dock .btn{flex:1}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
-@media (max-width:900px){.lab,.visit{grid-template-columns:1fr}.svc{grid-template-columns:1fr}.team{grid-template-columns:1fr 1fr}.quotes{columns:1}.dock{display:flex}.hide-m{display:none}.lock{max-width:420px;margin:0 auto;width:100%}}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.strands path{animation-duration:30s}.lock .shine{animation:none}}
-</style>
-</head>
-<body>
-<header id="hd"><div class="wrap bar">
-  <a class="logo" href="#">Ramazan Kuzu<small>Hair Studio · Maslak</small></a>
-  <a class="btn btn-main ml hide-m" href="https://wa.me/905458030839">Randevu al</a>
-</div></header>
-
-<main>
-<section class="hero">
-  <svg class="strands" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" id="strands"></svg>
-  <div class="wrap">
-    <span class="eyebrow">Renk · Açma · Keratin</span>
-    <h1>Saçınızın rengi, <i>tam istediğiniz</i> gibi.</h1>
-    <p class="lead">Maslak'ta renk ve açma işlemlerinde uzman bir ekip. Hassas saç derisine özenle, randevu saatinizde.</p>
-    <div class="row"><a class="btn btn-main" href="https://wa.me/905458030839">WhatsApp'tan randevu al</a><a class="btn btn-glass" href="tel:+905458030839">0545 803 08 39</a></div>
-    <div class="meta"><div><b>4,6</b>Google puanı</div><div><b>256</b>Google yorumu</div><div><b>Hadım Koruyolu Cd.</b>Maslak</div></div>
-  </div>
-</section>
-
-<section><div class="wrap lab">
-  <div class="lock reveal" aria-hidden="true">
-    <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop id="s1" offset="0" stop-color="#3a2a20"/><stop id="s2" offset="1" stop-color="#3a2a20"/></linearGradient></defs><g id="lock"></g></svg>
-    <span class="tag" id="tag">Doğal kahve</span>
-  </div>
-  <div>
-    <h2 class="reveal">Rengi önce burada deneyin.</h2>
-    <p class="sub reveal">Bir ton seçin, saç tutamı o renge geçsin. Gerçek sonuç saçınızın bugünkü rengine göre değişir; seçiminizi WhatsApp'tan gönderin, uzmanımız size yol haritasını söylesin.</p>
-    <div class="sws reveal" id="sws" role="group" aria-label="Renk tonları"></div>
-    <p class="desc reveal" id="desc" aria-live="polite"></p>
-    <a class="btn btn-main reveal" id="sendTone" href="https://wa.me/905458030839">Bu tonu sor</a>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="reveal">Hizmetler</h2>
-  <p class="sub reveal">Yorumlarda en çok geçen işlemler. Süre ve fiyat saçınıza göre belirlenir.</p>
-  <div class="svc reveal">
-    <div><h3>Saç boyama</h3><p>Tek renk, kök boya ve ton düzeltme.</p></div>
-    <div><h3>Açma ve highlights</h3><p>Balyaj, röfle ve kontrollü açma.</p></div>
-    <div><h3>Keratin bakım</h3><p>Düz ve yumuşak saç için uzun süreli bakım.</p></div>
-    <div><h3>Kesim ve model</h3><p>Yüz hattınıza göre kesim ve fön.</p></div>
-    <div><h3>Bakım paketleri</h3><p>Renk sonrası yıpranmaya karşı onarım.</p></div>
-    <div><h3>Hassas saç derisi</h3><p>Alerjiye yatkın müşteriler için özenli uygulama.</p></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="reveal">Ekip</h2>
-  <p class="sub reveal">Müşterilerin yorumlarında adıyla teşekkür ettiği isimler.</p>
-  <div class="team">
-    <div class="mem reveal"><div class="mono">RK</div><h3>Ramazan Kuzu</h3><p>Stüdyonun sahibi</p></div>
-    <div class="mem reveal"><div class="mono">GÖ</div><h3>Gökhan Özyurt</h3><p>Renk ve keratin</p></div>
-    <div class="mem reveal"><div class="mono">B</div><h3>Barış</h3><p>Kesim ve model</p></div>
-    <div class="mem reveal"><div class="mono">Y</div><h3>Yağız</h3><p>Kesim</p></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="reveal">Müşteriler ne yazıyor</h2>
-  <div class="quotes">
-    <blockquote class="reveal"><p>“Gökhan Özyurt'u yaklaşık 10 yıldır düzenli olarak tercih ediyorum. Taşınmama rağmen kendisinden vazgeçemedim.”</p><footer>Leyla A. E. · Google</footer></blockquote>
-    <blockquote class="reveal"><p>“Hassas ve alerjiye yatkın biri olarak, tüm işlemler boyunca en ufak bir rahatsızlık yaşamadım.”</p><footer>Nurhan B. · Google</footer></blockquote>
-    <blockquote class="reveal"><p>“Randevu saatimde gittim ve hiç beklemeden işleme geçtik. Saçlarım boyandı, açıldı, paket işlemi uygulandı.”</p><footer>Eda Y. · Google</footer></blockquote>
-    <blockquote class="reveal"><p>“İsviçre'nin Basel şehrinden arkadaşımla birlikte özellikle bu stüdyo için İstanbul'a geldik.”</p><footer>Leo R. · Google</footer></blockquote>
-  </div>
-</div></section>
-
-<section><div class="wrap visit">
-  <div class="card reveal">
-    <h2>Stüdyo</h2>
-    <p>Maslak, Hadım Koruyolu Cd. No:20, 34398 Şişli/İstanbul</p>
-    <p><a href="tel:+905458030839">0545 803 08 39</a> · WhatsApp aynı numara</p>
-    <p><a class="btn btn-glass" href="https://www.google.com/maps/dir/?api=1&destination=41.1155213,29.0008978" target="_blank" rel="noopener">Yol tarifi al</a></p>
-  </div>
-  <iframe class="reveal" title="Ramazan Kuzu Hair Studio harita" loading="lazy" src="https://www.google.com/maps?q=41.1155213,29.0008978&z=16&output=embed"></iframe>
-</div></section>
-
-<section class="close"><div class="wrap">
-  <h2 class="reveal">Sıradaki renk sizin.</h2>
-  <div class="row reveal"><a class="btn btn-main" href="https://wa.me/905458030839">Randevu al</a><a class="btn btn-glass" href="tel:+905458030839">Ara</a></div>
-</div></section>
-</main>
-<footer class="f"><div class="wrap">Ramazan Kuzu Hair Studio · Maslak · Bu sayfa bir tasarım örneğidir.</div></footer>
-<div class="dock"><a class="btn btn-glass" href="tel:+905458030839">Ara</a><a class="btn btn-main" href="https://wa.me/905458030839">Randevu</a></div>
-<script>
-// ambient strands
-const st=document.getElementById('strands');let h='';
-for(let i=0;i<34;i++){const x=i*38-60,c=i%3?'rgba(217,184,143,.20)':'rgba(232,207,196,.28)';h+=`<path d="M${x} -20 C ${x+120} 200, ${x-80} 420, ${x+60} 820" stroke="${c}" style="animation-delay:${-i*0.4}s"/>`}
-st.innerHTML=h;
-// lock of hair
-const L=document.getElementById('lock');let p='';
-for(let i=0;i<26;i++){const x=110+i*7,w=Math.sin(i)*14;p+=`<path d="M${x} -10 C ${x+40+w} 140, ${x-50} 300, ${x+20+w} 520" stroke="url(#g)" stroke-width="9" fill="none" stroke-linecap="round" opacity="${.65+((i*7)%10)/30}"/>`}
-p+='<path class="shine" d="M150 60 C 200 160, 140 280, 190 420" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>';
-L.innerHTML=p;
-const tones=[["Doğal kahve","#3a2a20","#5a4030","Kendi tonunuza yakın, parlaklık veren bir bakım rengi."],["Bal köpüğü","#7a5230","#d9a868","Kökte koyu, uçlarda bal sarısına açılan yumuşak geçiş."],["Küllü sarı","#8d7f6c","#e8dcc4","Sarı alt tonu nötrlenmiş soğuk sarı. Açma gerektirir."],["Bakır","#6e2c12","#c8642c","Sıcak ve canlı bir kızıl. Ten rengine göre ayarlanır."],["Çikolata","#2a1712","#5b3424","Koyu ve derin; beyaz kapatmaya uygun."],["Balyaj","#3a2a20","#e2c79c","Elle boyanan, doğal güneş açılması etkisi."]];
-const sws=document.getElementById('sws'),desc=document.getElementById('desc'),tag=document.getElementById('tag'),send=document.getElementById('sendTone');
-sws.innerHTML=tones.map((t,i)=>`<button class="sw" aria-pressed="${i==0}" data-i="${i}"><i style="background:linear-gradient(${t[1]},${t[2]})"></i>${t[0]}</button>`).join('');
-function pick(i){const t=tones[i];document.getElementById('s1').style.stopColor=t[1];document.getElementById('s2').style.stopColor=t[2];tag.textContent=t[0];desc.textContent=t[3];
- send.href='https://wa.me/905458030839?text='+encodeURIComponent('Merhaba, sitenizde "'+t[0]+'" tonunu gördüm. Saçıma uygun mu, randevu alabilir miyim?');
- sws.querySelectorAll('.sw').forEach(b=>b.setAttribute('aria-pressed',b.dataset.i==i))}
-sws.onclick=e=>{const b=e.target.closest('.sw');if(b)pick(+b.dataset.i)};pick(0);
-// smooth stop-color transition
-document.querySelectorAll('stop').forEach(s=>s.style.transition='stop-color 1s');
-const hd=document.getElementById('hd');addEventListener('scroll',()=>hd.classList.toggle('s',scrollY>40),{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Ramazan Kuzu Hair Studio | Maslak Kuaför, Renk ve Keratin</title>
+    <meta name="description" content="Maslak'ta renk, açma, highlights ve keratin. Renk stüdyosunda tonları deneyin, WhatsApp'tan sorun. 0545 803 08 39" />
+    <meta name="theme-color" content="#120E0B" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Ramazan Kuzu Hair Studio" />
+    <meta property="og:title" content="Ramazan Kuzu Hair Studio | Maslak Kuaför, Renk ve Keratin" />
+    <meta property="og:description" content="Maslak'ta renk, açma, highlights ve keratin. Renk stüdyosunda tonları deneyin, WhatsApp'tan sorun. 0545 803 08 39" />
+    <meta property="og:url" content="https://vakifbeyoglu.github.io/prime-dijital/ramazan-kuzu-hair/" />
+    <meta property="og:image" content="https://vakifbeyoglu.github.io/prime-dijital/ramazan-kuzu-hair/og.jpg?v=1" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ramazan Kuzu Hair Studio | Maslak Kuaför, Renk ve Keratin" />
+    <meta name="twitter:description" content="Maslak'ta renk, açma, highlights ve keratin. Renk stüdyosunda tonları deneyin, WhatsApp'tan sorun. 0545 803 08 39" />
+    <meta name="twitter:image" content="https://vakifbeyoglu.github.io/prime-dijital/ramazan-kuzu-hair/og.jpg?v=1" />
+    <link rel="canonical" href="https://vakifbeyoglu.github.io/prime-dijital/ramazan-kuzu-hair/" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Ramazan Kuzu Hair Studio","telephone":"+905458030839","url":"https://vakifbeyoglu.github.io/prime-dijital/ramazan-kuzu-hair/","image":"https://vakifbeyoglu.github.io/prime-dijital/ramazan-kuzu-hair/og.jpg","hasMap":"https://www.google.com/maps/search/?api=1&query=41.1155213,29.0008978","address":{"@type":"PostalAddress","streetAddress":"Maslak, Hadım Koruyolu Cd. No:20","addressLocality":"Şişli","addressRegion":"İstanbul","postalCode":"34398","addressCountry":"TR"},"geo":{"@type":"GeoCoordinates","latitude":41.1155213,"longitude":29.0008978}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/main-DxSrnBd8.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/Chrome-CFzEyXlP.js">
+    <link rel="stylesheet" crossorigin href="./assets/Chrome-B7AGdnEL.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
